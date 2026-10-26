@@ -18,7 +18,7 @@
 <h1 id="titulo-menu">Menú Entre Amigos</h1>
 
 <p class="subtitulo-restaurante">Comida rápida.</p>
-      <p id="estado-menu" role="status">Cargando menú...</p>
+      <p id="estado-menu" role="status">Para ordenar nuestros meseros están disponibles enseguida lo solicites.</p>
       <div id="lista-productos" class="lista-productos"></div>
     </section>
 
@@ -168,7 +168,7 @@ tarjeta.addEventListener('keydown', (evento) => {
           lista.append(tarjeta);
         });
 
-        estado.textContent = 'Consulta nuestros platillos disponibles';
+        estado.textContent = 'Para ordenar, nuestros meseros están disponibles en cuanto lo solicites.';
       } catch (error) {
         mostrarError('No se pudo cargar el menú. Revisa el enlace CSV y la publicación de Google Sheets.');
         console.error(error);
