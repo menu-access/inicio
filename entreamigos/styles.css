@@ -303,3 +303,161 @@ body {
     animation: none;
   }
 }
+/* PALETA MEDITERRÁNEA CLARA */
+html,
+body {
+  background: #F8F4EA !important;
+  color: #34483E;
+}
+
+/* Fondo con movimiento: mar, arena y vegetación */
+body {
+  position: relative;
+  isolation: isolate;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -25%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      ellipse at 15% 20%,
+      rgba(244, 208, 156, .72),
+      transparent 42%
+    ),
+    radial-gradient(
+      ellipse at 82% 22%,
+      rgba(145, 205, 205, .58),
+      transparent 42%
+    ),
+    radial-gradient(
+      ellipse at 70% 80%,
+      rgba(190, 213, 171, .58),
+      transparent 43%
+    ),
+    radial-gradient(
+      ellipse at 20% 85%,
+      rgba(235, 185, 160, .40),
+      transparent 40%
+    );
+  animation: mediterraneo-fluido 22s ease-in-out infinite alternate;
+}
+
+@keyframes mediterraneo-fluido {
+  0% {
+    transform: translate(-2%, 0) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translate(2%, 2%) rotate(4deg) scale(1.06);
+  }
+  100% {
+    transform: translate(-1%, 3%) rotate(-3deg) scale(1.02);
+  }
+}
+
+/* Mantener transparente el contenedor */
+.menu-page {
+  background: transparent !important;
+}
+
+/* Encabezado de platillos */
+#estado-menu {
+  max-width: 650px;
+  margin: 0 auto 28px;
+  padding: 13px 18px;
+  border: 1px solid rgba(112, 151, 139, .24);
+  border-radius: 16px;
+  background: rgba(255, 253, 247, .82);
+  color: #526B5D;
+  box-shadow: 0 5px 20px rgba(80, 102, 83, .07);
+  font-size: clamp(.94rem, 3vw, 1.08rem);
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Tarjetas claras, inspiradas en restaurantes mediterráneos */
+.producto-card {
+  background: rgba(255, 253, 247, .94) !important;
+  border: 1px solid #E7DDC9 !important;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(93, 100, 73, .09) !important;
+  color: #34483E;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition:
+    transform .28s ease,
+    box-shadow .28s ease,
+    border-color .28s ease;
+}
+
+.producto-card::before {
+  background: linear-gradient(
+    90deg,
+    #C77D55,
+    #D9B66F,
+    #719B8A
+  ) !important;
+}
+
+.producto-card h2 {
+  color: #354F43 !important;
+}
+
+.producto-descripcion {
+  color: #77776A !important;
+}
+
+.producto-precio {
+  color: #326B55 !important;
+  background: #E4F1E5 !important;
+  border-radius: 10px;
+  padding: 7px 12px;
+}
+
+/* Ampliación en computadora */
+@media (hover: hover) and (pointer: fine) {
+  .producto-card:hover {
+    background: #FFFEFA !important;
+    border-color: #B8CEC0 !important;
+    box-shadow: 0 18px 55px rgba(65, 92, 73, .20) !important;
+  }
+
+  .producto-card:hover h2 {
+    color: #285D49 !important;
+  }
+
+  .producto-card:hover .producto-descripcion {
+    color: #65695F !important;
+  }
+}
+
+/* Ampliación en teléfono */
+.producto-card.expandida {
+  background: #FFFEFA !important;
+  border-color: #B8CEC0 !important;
+}
+
+.producto-card.expandida h2 {
+  color: #285D49 !important;
+}
+
+.producto-card.expandida .producto-descripcion {
+  color: #65695F !important;
+}
+
+/* Botón de menú original */
+.menu-original summary {
+  background: rgba(255, 253, 247, .95) !important;
+  color: #426A58 !important;
+  border-color: #D7E2D4 !important;
+}
+
+/* Respeto a usuarios que prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  body::before {
+    animation: none !important;
+  }
+}
