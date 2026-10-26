@@ -2,22 +2,67 @@
   box-sizing: border-box;
 }
 
+:root {
+  --arena: #F8F4EA;
+  --tarjeta: #FFFEFA;
+  --verde: #326B55;
+  --verde-oscuro: #285D49;
+  --salvia: #719B8A;
+  --terracota: #C77D55;
+  --dorado: #D9B66F;
+  --texto: #34483E;
+  --secundario: #77776A;
+  --borde: #E7DDC9;
+}
+
 html,
 body {
   margin: 0;
   min-height: 100%;
-  background: #000000;
+  background: var(--arena);
+  color: var(--texto);
 }
 
 body {
+  position: relative;
+  isolation: isolate;
   font-family: Arial, sans-serif;
-  color: #ffffff;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -25%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 15% 20%,
+      rgba(244,208,156,.72), transparent 42%),
+    radial-gradient(ellipse at 82% 22%,
+      rgba(145,205,205,.58), transparent 42%),
+    radial-gradient(ellipse at 70% 80%,
+      rgba(190,213,171,.58), transparent 43%),
+    radial-gradient(ellipse at 20% 85%,
+      rgba(235,185,160,.40), transparent 40%);
+  animation: fondo-mediterraneo 22s ease-in-out infinite alternate;
+}
+
+@keyframes fondo-mediterraneo {
+  0% {
+    transform: translate(-2%,0) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translate(2%,2%) rotate(4deg) scale(1.06);
+  }
+  100% {
+    transform: translate(-1%,3%) rotate(-3deg) scale(1.02);
+  }
 }
 
 .menu-page {
   width: 100%;
   min-height: 100vh;
-  background: #000000;
+  background: transparent;
 }
 
 .productos-section {
@@ -25,21 +70,95 @@ body {
   max-width: 900px;
   margin: 0 auto;
   padding: 24px 16px 100px;
-  color: #ffffff;
+  color: var(--texto);
 }
 
-.productos-section h1 {
+/* Bienvenida animada */
+.bienvenida {
+  max-width: 700px;
+  margin: 0 auto 18px;
+  text-align: center;
+  font-size: clamp(1.15rem, 4vw, 1.8rem);
+  font-weight: 800;
+  line-height: 1.5;
+  color: var(--terracota);
+  animation: bienvenida-flota 3.5s ease-in-out infinite;
+  text-wrap: balance;
+}
+
+@keyframes bienvenida-flota {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Título principal */
+.productos-section h1,
+#titulo-menu {
   margin: 0 0 10px;
   text-align: center;
-  color: #f4c542;
-  font-size: clamp(1.6rem, 5vw, 2.4rem);
+  font-size: clamp(1.8rem, 6vw, 2.7rem);
+  font-weight: 900;
+  color: var(--verde-oscuro);
+  animation: titulo-aparece 1.2s ease both,
+             titulo-brillo 5s ease-in-out infinite 1.2s;
 }
 
-#estado-menu {
+@keyframes titulo-aparece {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes titulo-brillo {
+  0%, 100% {
+    filter: drop-shadow(0 0 0 rgba(50,107,85,0));
+  }
+  50% {
+    filter: drop-shadow(0 3px 10px rgba(50,107,85,.22));
+  }
+}
+
+/* Subtítulo con colores animados */
+.subtitulo-restaurante {
+  margin: 0 0 26px;
   text-align: center;
-  color: #cccccc;
+  font-size: clamp(1.2rem, 4vw, 1.7rem);
+  font-weight: 900;
+  letter-spacing: 1px;
+  background: linear-gradient(
+    90deg,
+    #C77D55,
+    #D9B66F,
+    #719B8A,
+    #4198CE,
+    #C77D55
+  );
+  background-size: 250% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: colores-subtitulo 6s linear infinite;
 }
 
+@keyframes colores-subtitulo {
+  to { background-position: 250% center; }
+}
+
+/* Mensaje del menú */
+#estado-menu {
+  max-width: 650px;
+  margin: 0 auto 28px;
+  padding: 13px 18px;
+  border: 1px solid rgba(112,151,139,.30);
+  border-radius: 16px;
+  background: rgba(255,253,247,.90);
+  color: #526B5D;
+  box-shadow: 0 5px 20px rgba(80,102,83,.07);
+  font-size: clamp(.94rem, 3vw, 1.08rem);
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Distribución de platillos */
 .lista-productos {
   display: grid;
   grid-template-columns: 1fr;
@@ -47,41 +166,174 @@ body {
 }
 
 .producto-card {
-  padding: 16px;
-  border: 1px solid #333333;
-  border-radius: 14px;
-  background: #151515;
-  color: #ffffff;
+  position: relative;
+  min-width: 0;
+  padding: 20px;
+  overflow-wrap: anywhere;
+  border: 1px solid var(--borde);
+  border-radius: 20px;
+  background: rgba(255,253,247,.96);
+  color: var(--texto);
+  box-shadow: 0 8px 25px rgba(93,100,73,.10);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  cursor: pointer;
+  transform-origin: center;
+  transition:
+    transform .28s ease,
+    box-shadow .28s ease,
+    border-color .28s ease,
+    background-color .28s ease;
+}
+
+.producto-card::before {
+  content: "";
+  display: block;
+  height: 4px;
+  margin: -20px -20px 17px;
+  border-radius: 20px 20px 0 0;
+  background: linear-gradient(
+    90deg,
+    var(--terracota),
+    var(--dorado),
+    var(--salvia)
+  );
 }
 
 .producto-card h2 {
-  margin: 0 0 8px;
-  color: #ffffff;
-  font-size: 1.15rem;
+  margin: 0 0 10px;
+  color: #354F43;
+  font-size: 1.2rem;
+  line-height: 1.4;
 }
 
 .producto-descripcion {
-  margin: 0 0 12px;
-  color: #cccccc;
-  line-height: 1.5;
+  margin: 0 0 14px;
+  color: var(--secundario);
+  line-height: 1.65;
+  overflow-wrap: anywhere;
 }
 
 .producto-precio {
+  display: inline-block;
   margin: 0;
-  color: #45e08a;
-  font-size: 1.15rem;
-  font-weight: 700;
+  padding: 7px 12px;
+  border-radius: 10px;
+  background: #E4F1E5;
+  color: var(--verde);
+  font-size: 1.2rem;
+  font-weight: 800;
 }
 
+/* Ampliación al tocar en celular */
+.producto-card.expandida {
+  position: fixed;
+  z-index: 2001;
+  top: 50%;
+  left: 50%;
+  width: 90vw;
+  max-width: 680px;
+  max-height: 82vh;
+  max-height: 82dvh;
+  overflow-y: auto;
+  padding: clamp(20px, 5vw, 32px);
+  transform: translate(-50%, -50%);
+  border: 2px solid #B8CEC0;
+  border-radius: 24px;
+  background: #FFFEFA;
+  box-shadow: 0 20px 80px rgba(65,92,73,.25);
+}
+
+.producto-card.expandida::before {
+  margin: calc(-1 * clamp(20px, 5vw, 32px))
+          calc(-1 * clamp(20px, 5vw, 32px))
+          20px;
+}
+
+.producto-card.expandida h2 {
+  color: var(--verde-oscuro);
+  font-size: clamp(1.4rem, 4vw, 1.8rem);
+}
+
+.producto-card.expandida .producto-descripcion {
+  color: #65695F;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.producto-card.expandida .producto-precio {
+  font-size: 1.4rem;
+}
+
+/* Ampliación con ratón en computadora */
+@media (hover: hover) and (pointer: fine) {
+  .producto-card:hover {
+    position: fixed;
+    z-index: 2000;
+    top: 50%;
+    left: 50%;
+    width: min(90vw, 680px);
+    max-height: 86vh;
+    max-height: 86dvh;
+    overflow-y: auto;
+    padding: clamp(22px, 5vw, 36px);
+    transform: translate(-50%, -50%);
+    border: 2px solid #B8CEC0;
+    border-radius: 24px;
+    background: #FFFEFA;
+    box-shadow: 0 18px 55px rgba(65,92,73,.22);
+  }
+
+  .producto-card:hover::before {
+    margin: calc(-1 * clamp(22px, 5vw, 36px))
+            calc(-1 * clamp(22px, 5vw, 36px))
+            20px;
+  }
+
+  .producto-card:hover h2 {
+    color: var(--verde-oscuro);
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+
+  .producto-card:hover .producto-descripcion {
+    color: #65695F;
+    font-size: 1.1rem;
+  }
+
+  .producto-card:hover .producto-precio {
+    font-size: 1.5rem;
+  }
+
+  body:has(.producto-card:hover)::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 1999;
+    background: rgba(52,72,62,.16);
+    backdrop-filter: blur(3px);
+    pointer-events: none;
+  }
+}
+
+@media (min-width: 600px) {
+  .lista-productos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Menú original en imagen */
 .menu-original {
   padding: 0 16px 30px;
-  color: #ffffff;
+  color: var(--texto);
   text-align: center;
 }
 
 .menu-original summary {
   padding: 12px;
-  color: #f4c542;
+  border: 1px solid #D7E2D4;
+  border-radius: 12px;
+  background: rgba(255,253,247,.95);
+  color: #426A58;
   cursor: pointer;
 }
 
@@ -94,25 +346,24 @@ body {
   object-fit: contain;
 }
 
-/* Botón flotante original de WhatsApp */
+/* Botón flotante de WhatsApp */
 .whatsapp-float {
   position: fixed;
   right: 16px;
   bottom: 18px;
-  z-index: 1000;
+  z-index: 3000;
   width: 60px;
   height: 60px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
+  color: #FFFFFF;
   background: #25D366;
   text-decoration: none;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.45);
-  border: 2px solid #ffffff;
-  transition: transform 0.18s ease,
-              background-color 0.18s ease;
+  box-shadow: 0 3px 12px rgba(0,0,0,.25);
+  border: 2px solid #FFFFFF;
+  transition: transform .18s ease, background-color .18s ease;
 }
 
 .whatsapp-float:hover {
@@ -128,12 +379,15 @@ body {
 }
 
 .whatsapp-float:focus-visible {
-  outline: 3px solid #ffffff;
+  outline: 3px solid var(--verde);
   outline-offset: 4px;
 }
 
-@media (min-width: 600px) {
-  .lista-productos {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
   }
 }
