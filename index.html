@@ -2,146 +2,162 @@
 <html lang="es-MX">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#080D18">
-  <meta name="description" content="Menú Access — Acceso fácil, menú al instante.">
-  <title>Menú Access</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Menú de Entre Amigos Comida Rápida">
+  <title>Entre Amigos | Menú</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <div class="digital-background" aria-hidden="true">
-    <div class="ambient ambient-one"></div>
-    <div class="ambient ambient-two"></div>
-    <div class="ambient ambient-three"></div>
-    <div class="digital-grid"></div>
-    <div class="light-orbit background-orbit-one"></div>
-    <div class="light-orbit background-orbit-two"></div>
-    <div class="particles">
-      <span></span><span></span><span></span><span></span>
-      <span></span><span></span><span></span><span></span>
-      <span></span><span></span><span></span><span></span>
-    </div>
-  </div>
+  <main class="menu-page">
+    <section class="productos-section" aria-labelledby="titulo-menu">
+      <h1 id="titulo-menu">Menú Entre Amigos</h1>
+      <p id="estado-menu" role="status">Cargando menú...</p>
+      <div id="lista-productos" class="lista-productos"></div>
+    </section>
 
-  <main class="hero">
-    <div class="brand-stage">
-
-      <div class="brand-orbit orbit-a" aria-hidden="true"></div>
-      <div class="brand-orbit orbit-b" aria-hidden="true"></div>
-      <div class="brand-orbit orbit-c" aria-hidden="true"></div>
-
-      <div class="brand-logo">
-
-        <div class="logo-halo" aria-hidden="true"></div>
-
-        <div class="phone-wrap" aria-hidden="true">
-          <div class="phone">
-            <div class="phone-speaker"></div>
-            <div class="phone-camera"></div>
-
-            <div class="phone-screen">
-              <div class="screen-top">
-                <span class="screen-dot"></span>
-                <span class="screen-line"></span>
-                <span class="screen-dot"></span>
-              </div>
-
-              <div class="screen-title"></div>
-
-              <div class="screen-categories">
-                <span></span><span></span><span></span>
-              </div>
-
-              <div class="menu-cards">
-                <div class="menu-card">
-                  <div class="food-art food-one"><span></span></div>
-                  <i></i><b></b>
-                </div>
-
-                <div class="menu-card">
-                  <div class="food-art food-two"><span></span></div>
-                  <i></i><b></b>
-                </div>
-
-                <div class="menu-card">
-                  <div class="food-art food-three"><span></span></div>
-                  <i></i><b></b>
-                </div>
-              </div>
-
-              <div class="screen-bottom">
-                <span></span><span></span><span></span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="signal signal-one" aria-hidden="true"></div>
-        <div class="signal signal-two" aria-hidden="true"></div>
-
-        <div class="brand-copy">
-          <div class="brand-name">
-            <span class="name-menu">Menú</span>
-            <span class="name-access">Access</span>
-          </div>
-
-          <div class="brand-divider"><span></span></div>
-
-          <p class="brand-slogan">
-            Acceso fácil,<br>
-            menú al instante.
-          </p>
-        </div>
-
-        <div class="logo-spark spark-one" aria-hidden="true"></div>
-        <div class="logo-spark spark-two" aria-hidden="true"></div>
-        <div class="logo-spark spark-three" aria-hidden="true"></div>
-      </div>
-
-      <div class="stage-caption" aria-hidden="true">
-        <span></span><span></span><span></span>
-      </div>
-    </div>
+    <details class="menu-original">
+      <summary>Ver menú original completo</summary>
+      <img
+        class="menu-image"
+        src="menu.entreamigos-4k.jpeg"
+        alt="Menú original de Entre Amigos Comida Rápida">
+    </details>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-brand">
-      <div class="footer-emblem" aria-hidden="true">
-        <span class="footer-phone"></span>
-        <span class="footer-ring"></span>
-      </div>
-
-      <div class="footer-copy">
-        <span class="footer-name">Menú Access</span>
-        <span class="footer-slogan">Acceso fácil, menú al instante.</span>
-      </div>
-    </div>
-
-    <div class="footer-decoration" aria-hidden="true">
-      <span></span><span></span><span></span>
-    </div>
-  </footer>
-
-  <a
-    class="whatsapp-button"
-    href="https://wa.me/525574042697"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Contactar a Menú Access por WhatsApp"
-  >
-    <span class="whatsapp-icon" aria-hidden="true">
-      <svg viewBox="0 0 32 32">
-        <path d="M16 3.2A12.3 12.3 0 0 0 5.4 21.7L3.7 28l6.5-1.7A12.3 12.3 0 1 0 16 3.2Z"
-          fill="none" stroke="currentColor" stroke-width="2.1"
-          stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M11.2 9.7c-.4-.9-.8-.9-1.2-.9h-1c-.4 0-1 .2-1.5.7-.5.5-1.9 1.8-1.9 4.3s1.9 5 2.2 5.3c.3.3 3.7 5.9 9.1 8 4.5 1.8 5.4 1.4 6.4 1.3 1-.2 3.2-1.3 3.6-2.6.5-1.3.5-2.4.3-2.6-.1-.2-.5-.4-1-.6l-3.4-1.7c-.5-.2-.8-.3-1.1.3-.3.5-1.3 1.7-1.6 2-.3.3-.6.4-1.1.1-.5-.2-2.1-.8-4-2.5-1.5-1.3-2.5-3-2.8-3.5-.3-.5 0-.7.2-1 .2-.2.5-.6.7-.8.2-.3.3-.5.5-.8.2-.3.1-.6 0-.8Z"
-          transform="translate(3 0) scale(.78)" fill="currentColor"/>
-      </svg>
-    </span>
-
-    <span class="whatsapp-label">WhatsApp</span>
-    <span class="whatsapp-arrow" aria-hidden="true">↗</span>
+  <a class="whatsapp-float"
+     href="https://wa.me/527229395466"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path fill="currentColor" d="M16 3C8.9 3 3.2 8.7 3.2 15.8c0 2.3.6 4.5 1.8 6.4L3 29l7-1.8c1.8 1 3.9 1.5 6 1.5 7.1 0 12.8-5.7 12.8-12.8C28.8 8.8 23.1 3 16 3zm0 23.4c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4 0 1.1-3.8-.3-.4a10.5 10.5 0 1 1 9 5.9zm5.9-7.9c-.3-.1-1.6-.8-1.9-.9-.2-.1-.4-.1-.6.2-.2.2-.7.9-.9 1.1-.1.2-.3.2-.6.1-.2-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.6-1.5-1.9-.1-.2 0-.4.1-.5l.4-.5c.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.3s1 2.7 1.1 2.9c.1.2 2 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.7.1.5-.1 1.6-.7 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.2-.3-.3-.6-.4z"/>
+    </svg>
   </a>
+
+  <script>
+    const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTPkiv0pOXPkAyspOVpzbPs5tBRakvpL3RDz5Mh67MGc81JY0sjIBcmyPNZ5XElpT11xHiMRODMobE_/pub?gid=0&single=true&output=csv';
+
+    const estado = document.getElementById('estado-menu');
+    const lista = document.getElementById('lista-productos');
+
+    function analizarCSV(texto) {
+      const filas = [];
+      let fila = [];
+      let celda = '';
+      let comillas = false;
+
+      for (let i = 0; i < texto.length; i++) {
+        const caracter = texto[i];
+
+        if (caracter === '"') {
+          if (comillas && texto[i + 1] === '"') {
+            celda += '"';
+            i++;
+          } else {
+            comillas = !comillas;
+          }
+        } else if (caracter === ',' && !comillas) {
+          fila.push(celda);
+          celda = '';
+        } else if ((caracter === '\n' || caracter === '\r') && !comillas) {
+          if (caracter === '\r' && texto[i + 1] === '\n') i++;
+          fila.push(celda);
+          if (fila.some(valor => valor.trim() !== '')) filas.push(fila);
+          fila = [];
+          celda = '';
+        } else {
+          celda += caracter;
+        }
+      }
+
+      fila.push(celda);
+      if (fila.some(valor => valor.trim() !== '')) filas.push(fila);
+
+      if (!filas.length) return [];
+
+      const encabezados = filas[0].map(valor =>
+        valor.replace(/^\uFEFF/, '').trim().toLowerCase()
+      );
+
+      return filas.slice(1).map(valores => {
+        const producto = {};
+        encabezados.forEach((encabezado, indice) => {
+          producto[encabezado] = (valores[indice] || '').trim();
+        });
+        return producto;
+      });
+    }
+
+    function campo(producto, nombre) {
+      const clave = Object.keys(producto).find(
+        k => k.normalize('NFD').replace(/[\u0300-\u036f]/g, '') === nombre
+      );
+      return clave ? producto[clave] : '';
+    }
+
+    function mostrarError(mensaje) {
+      estado.textContent = mensaje;
+    }
+
+    async function cargarMenu() {
+      try {
+        if (CSV_URL === 'PEGA_AQUI_TU_ENLACE_CSV') {
+          throw new Error('Falta configurar el enlace CSV.');
+        }
+
+        const respuesta = await fetch(CSV_URL);
+        if (!respuesta.ok) throw new Error('No se pudo consultar el menú.');
+
+        const texto = await respuesta.text();
+        const productos = analizarCSV(texto);
+
+        const visibles = productos.filter(producto => {
+          const disponible = String(campo(producto, 'disponible')).toLowerCase();
+          return ['true', 'verdadero', 'sí', 'si', '1'].includes(disponible);
+        });
+
+        lista.replaceChildren();
+
+        if (!visibles.length) {
+          mostrarError('No hay platillos disponibles o falta revisar la columna Disponible.');
+          return;
+        }
+
+        visibles.forEach(producto => {
+          const tarjeta = document.createElement('article');
+          tarjeta.className = 'producto-card';
+
+          const nombre = document.createElement('h2');
+          nombre.textContent = campo(producto, 'nombre') || 'Platillo';
+
+          const descripcionTexto = campo(producto, 'descripcion');
+          const descripcion = document.createElement('p');
+          descripcion.className = 'producto-descripcion';
+          descripcion.textContent = descripcionTexto;
+
+          const precio = document.createElement('p');
+          precio.className = 'producto-precio';
+          const valorPrecio = campo(producto, 'precio');
+          precio.textContent = valorPrecio
+            ? '$' + valorPrecio.replace(/^\$/, '') + ' MXN'
+            : 'Consultar precio';
+
+          tarjeta.append(nombre);
+          if (descripcionTexto) tarjeta.append(descripcion);
+          tarjeta.append(precio);
+
+          lista.append(tarjeta);
+        });
+
+        estado.textContent = 'Consulta nuestros platillos disponibles';
+      } catch (error) {
+        mostrarError('No se pudo cargar el menú. Revisa el enlace CSV y la publicación de Google Sheets.');
+        console.error(error);
+      }
+    }
+
+    cargarMenu();
+  </script>
 </body>
 </html>
