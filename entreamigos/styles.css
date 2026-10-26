@@ -1,3 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: #000000;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+}
+
+.menu-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #000000;
+}
+
 .productos-section {
   width: 100%;
   max-width: 900px;
@@ -9,6 +31,7 @@
 .productos-section h1 {
   margin: 0 0 10px;
   text-align: center;
+  color: #f4c542;
   font-size: clamp(1.6rem, 5vw, 2.4rem);
 }
 
@@ -28,10 +51,12 @@
   border: 1px solid #333333;
   border-radius: 14px;
   background: #151515;
+  color: #ffffff;
 }
 
 .producto-card h2 {
   margin: 0 0 8px;
+  color: #ffffff;
   font-size: 1.15rem;
 }
 
@@ -56,14 +81,55 @@
 
 .menu-original summary {
   padding: 12px;
+  color: #f4c542;
   cursor: pointer;
 }
 
 .menu-image {
+  display: block;
   width: 100%;
   height: auto;
   max-width: 1100px;
   margin: 12px auto;
+  object-fit: contain;
+}
+
+/* Botón flotante original de WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  right: 16px;
+  bottom: 18px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: #25D366;
+  text-decoration: none;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.45);
+  border: 2px solid #ffffff;
+  transition: transform 0.18s ease,
+              background-color 0.18s ease;
+}
+
+.whatsapp-float:hover {
+  background: #128C7E;
+  transform: scale(1.06);
+}
+
+.whatsapp-float svg {
+  display: block;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+}
+
+.whatsapp-float:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 4px;
 }
 
 @media (min-width: 600px) {
