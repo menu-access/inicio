@@ -133,7 +133,19 @@
         visibles.forEach(producto => {
           const tarjeta = document.createElement('article');
           tarjeta.className = 'producto-card';
+tarjeta.setAttribute('tabindex', '0');
+tarjeta.setAttribute('role', 'button');
+tarjeta.setAttribute('aria-label', 'Ampliar platillo');
 
+tarjeta.addEventListener('click', () => {
+  tarjeta.classList.toggle('expandida');
+});
+
+tarjeta.addEventListener('keydown', (evento) => {
+  if (evento.key === 'Escape') {
+    tarjeta.classList.remove('expandida');
+  }
+});
           const nombre = document.createElement('h2');
           nombre.textContent = campo(producto, 'nombre') || 'Platillo';
 
