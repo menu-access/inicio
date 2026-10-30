@@ -2,80 +2,350 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tres Amigos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>Tres Amigos | Menú</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-  <header class="logo-container">
+  <main>
+    <!-- ENCABEZADO Y LOGOTIPO -->
+    <header class="hero">
+      <p class="welcome">¡Bienvenidos!</p>
 
-    <div class="logo">
+      <div class="logo-animation">
+        <svg class="logo-art" viewBox="0 0 360 210"
+             xmlns="http://www.w3.org/2000/svg"
+             role="img" aria-label="Tres amigos y una hamburguesa">
 
-      <svg class="logo-illustration"
-           viewBox="0 0 360 210"
-           xmlns="http://www.w3.org/2000/svg"
-           role="img"
-           aria-label="Tres amigos y una hamburguesa">
+          <!-- Hamburguesa superior -->
+          <g stroke="#542719" stroke-width="5" stroke-linejoin="round">
+            <path d="M145 48 Q145 13 180 13 Q215 13 215 48Z"
+                  fill="#F8B323"/>
+            <path d="M143 52H217"/>
+          </g>
 
-        <!-- Hamburguesa -->
-        <g stroke="#542719" stroke-width="5"
-           stroke-linejoin="round">
-          <path d="M145 48 Q145 13 180 13 Q215 13 215 48 Z"
-                fill="#F8B323"/>
-          <path d="M143 52 H217" stroke="#542719"/>
-          <path d="M146 58 H214" stroke="#542719"/>
-          <path d="M145 64 H215" stroke="#542719"/>
-        </g>
+          <!-- Amigo izquierdo -->
+          <g>
+            <circle cx="83" cy="91" r="23" fill="#F4C6A0"/>
+            <path d="M60 88Q61 55 85 59Q107 59 106 87Q93 75 75 79Z"
+                  fill="#542719"/>
+            <path d="M40 178Q38 125 83 125Q128 125 127 178Z"
+                  fill="#E51D35"/>
+          </g>
 
-        <!-- Personaje izquierdo -->
-        <g>
-          <circle cx="83" cy="91" r="23" fill="#F4C6A0"/>
-          <path d="M60 88 Q61 55 85 59 Q107 59 106 87
-                   Q93 75 75 79 Z" fill="#542719"/>
-          <path d="M40 178 Q38 125 83 125 Q128 125 127 178 Z"
-                fill="#E51D35"/>
-        </g>
+          <!-- Amigo central -->
+          <g>
+            <circle cx="180" cy="91" r="25" fill="#F4C6A0"/>
+            <path d="M154 87Q153 51 181 54Q207 54 206 87Q189 72 164 80Z"
+                  fill="#542719"/>
+            <path d="M153 58Q180 34 207 58L205 68Q180 58 155 68Z"
+                  fill="#E51D35"/>
+            <path d="M137 178Q137 122 180 122Q223 122 223 178Z"
+                  fill="#F8B323"/>
+          </g>
 
-        <!-- Personaje central -->
-        <g>
-          <circle cx="180" cy="91" r="25" fill="#F4C6A0"/>
-          <path d="M154 87 Q153 51 181 54 Q207 54 206 87
-                   Q189 72 164 80 Z" fill="#542719"/>
-          <path d="M153 58 Q180 34 207 58 L205 68
-                   Q180 58 155 68 Z" fill="#E51D35"/>
-          <path d="M137 178 Q137 122 180 122 Q223 122 223 178 Z"
-                fill="#F8B323"/>
-        </g>
+          <!-- Amigo derecho -->
+          <g>
+            <circle cx="277" cy="91" r="23" fill="#F4C6A0"/>
+            <path d="M254 88Q255 55 278 59Q301 59 300 87Q284 76 267 80Z"
+                  fill="#542719"/>
+            <path d="M233 178Q232 125 277 125Q322 125 320 178Z"
+                  fill="#E51D35"/>
+          </g>
 
-        <!-- Personaje derecho -->
-        <g>
-          <circle cx="277" cy="91" r="23" fill="#F4C6A0"/>
-          <path d="M254 88 Q255 55 278 59 Q301 59 300 87
-                   Q284 76 267 80 Z" fill="#542719"/>
-          <path d="M233 178 Q232 125 277 125 Q322 125 320 178 Z"
-                fill="#E51D35"/>
-        </g>
+          <!-- Hamburguesa frontal -->
+          <g stroke="#542719" stroke-width="4" stroke-linejoin="round">
+            <path d="M137 143Q137 117 180 117Q223 117 223 143Z"
+                  fill="#F8B323"/>
+            <path d="M139 147H221" stroke="#5B9D45"/>
+            <path d="M139 153H221" stroke="#E51D35"/>
+            <path d="M137 158Q180 168 223 158L220 170Q180 181 140 170Z"
+                  fill="#F8B323"/>
+          </g>
+        </svg>
+      </div>
 
-        <!-- Hamburguesa al frente -->
-        <g stroke="#542719" stroke-width="4" stroke-linejoin="round">
-          <path d="M137 143 Q137 117 180 117 Q223 117 223 143 Z"
-                fill="#F8B323"/>
-          <path d="M139 147 H221" stroke="#5B9D45"/>
-          <path d="M139 153 H221" stroke="#E51D35"/>
-          <path d="M137 158 Q180 168 223 158 L220 170
-                   Q180 181 140 170 Z" fill="#F8B323"/>
-        </g>
+      <h1 class="brand-name">Tres Amigos</h1>
+      <div class="brand-divider"></div>
+      <h2 class="menu-heading">Menú</h2>
 
-      </svg>
+      <p class="intro">
+        Enseguida usted lo solicite, uno de nuestros meseros tomará su orden.
+      </p>
+    </header>
 
-      <h1>Tres Amigos</h1>
-      <div class="gold-line"></div>
-      <p class="tagline">HAMBURGUESAS · ALITAS · MÁS</p>
+    <!-- MENÚ INDIVIDUAL -->
+    <section class="menu-section">
+      <div class="section-heading">
+        <span class="eyebrow">EL SABOR DE LA AMISTAD</span>
+        <h2>Nuestros platillos</h2>
+        <p>Elige tu favorito y descubre todos sus detalles.</p>
+      </div>
 
-    </div>
+      <div id="menu-grid" class="menu-grid">
+        <p class="loading">Cargando nuestro menú...</p>
+      </div>
+    </section>
 
-  </header>
+    <!-- MENÚ COMPLETO -->
+    <section class="complete-menu">
+      <h2>Menú completo</h2>
+      <p>Consulta todos nuestros platillos en una sola imagen.</p>
+      <button class="complete-button" id="open-full-menu">
+        Ver menú completo <span>→</span>
+      </button>
+    </section>
+  </main>
+
+  <!-- MODAL DE PLATILLO -->
+  <div class="modal" id="product-modal"
+       aria-hidden="true" role="dialog"
+       aria-modal="true" aria-label="Detalle del platillo">
+    <button class="modal-close" id="close-product"
+            aria-label="Cerrar">×</button>
+    <article class="modal-card" id="modal-card">
+      <div class="modal-image-wrap">
+        <img id="modal-image" src="" alt="">
+      </div>
+      <div class="modal-info">
+        <span class="modal-label">TRES AMIGOS</span>
+        <h2 id="modal-name"></h2>
+        <p id="modal-description"></p>
+        <strong id="modal-price"></strong>
+      </div>
+    </article>
+  </div>
+
+  <!-- MODAL DEL MENÚ COMPLETO -->
+  <div class="full-menu-modal" id="full-menu-modal"
+       aria-hidden="true">
+    <button class="modal-close" id="close-full-menu"
+            aria-label="Cerrar">×</button>
+    <img src="menu.entreamigos-4k.jpeg"
+         alt="Menú completo de Tres Amigos"
+         class="full-menu-image">
+  </div>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="footer">
+    <h2>Gracias por visitarnos amigos</h2>
+    <p>Nos encantaría saber sus comentarios y experiencia.</p>
+    <a class="footer-whatsapp"
+       href="https://wa.me/520123456789"
+       target="_blank" rel="noopener">
+      Envíanos tus comentarios por WhatsApp
+    </a>
+    <div class="footer-line"></div>
+    <small>© Tres Amigos</small>
+  </footer>
+
+  <!-- WHATSAPP FLOTANTE -->
+  <a class="whatsapp-float"
+     href="https://wa.me/520123456789"
+     target="_blank" rel="noopener"
+     aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path fill="currentColor"
+        d="M16 .8A15.1 15.1 0 0 0 3.1 23.7L1 31l7.5-2A15.2 15.2 0 1 0 16 .8Zm0 27.5a12.3 12.3 0 0 1-6.3-1.7l-.5-.3-4.4 1.2L6 23.2l-.3-.5A12.4 12.4 0 1 1 16 28.3Zm6.8-9.3c-.4-.2-2.2-1.1-2.5-1.2-.3-.1-.6-.2-.8.2-.2.4-1 1.2-1.2 1.5-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.5-.3.4-1.2 1.2-1.2 3s1.3 3.5 1.5 3.7c.2.2 2.5 3.8 6.1 5.3.9.4 1.6.6 2.1.7.9.3 1.7.2 2.3.1.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.1-.3-.2-.7-.4Z"/>
+    </svg>
+  </a>
+
+  <script>
+    // Google Sheets: pestaña "Platillos", publicada como CSV.
+    const SHEET_CSV =
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vTPkiv0pOXPkAyspOVpzbPs5tBRakvpL3RDz5Mh67MGc81JY0sjIBcmyPNZ5XElpT11xHiMRODMobE_/pub?gid=0&single=true&output=csv";
+
+    // Productos de respaldo si Google Sheets no responde.
+    const fallbackProducts = [
+      ["1","LA CLÁSICA","Carne de res a la parrilla, queso amarillo, lechuga fresca, jitomate, cebolla y aderezo de la casa en pan con ajonjolí.","Hamburguesas","85","","TRUE","1"],
+      ["2","DELICIOUS BBQ","Carne de res jugosa, queso cheddar, tocino crujiente y salsa BBQ ahumada, servidos en pan suave tostado.","Hamburguesas","97","","TRUE","2"],
+      ["3","POLLO MEXICAN","Pechuga de pollo crujiente, queso manchego, aguacate, lechuga, jitomate y mayonesa con chipotle en pan dorado.","Hamburguesas","89","","TRUE","3"],
+      ["4","PIKOSITAS BBQ","12 piezas de alitas doradas bañadas en salsa BBQ con un toque picante, especias y sabor ahumado intenso.","Alitas","120","","TRUE","4"],
+      ["5","DULCES AMIGAS BBQ","12 piezas de alitas crujientes cubiertas con salsa BBQ dulce, un toque de miel y especias para equilibrar cada bocado.","Alitas","120","","TRUE","5"],
+      ["6","CRUJI-ALAS","12 piezas de alitas con cubierta dorada y extra crujiente, sazonadas con una mezcla de especias y acompañadas de aderezo cremoso.","Alitas","120","","TRUE","6"],
+      ["7","AMIGO DEL NORTE","Salchicha envuelta en tocino, pan suave, cebolla asada, jitomate y una combinación de mostaza, cátsup y mayonesa.","Snacks","75","","TRUE","7"],
+      ["8","AMIGO CHILANGO","Salchicha a la plancha en pan suave con jitomate, cebolla, jalapeños, mayonesa y salsa al gusto.","Snacks","75","","TRUE","8"],
+      ["9","REFRESCO EN LATA","Coca-Cola, Pepsi, Sprite, Fanta y Manzanita Sol. Lata de 235 ml, al tiempo o fría.","Bebidas","25","","TRUE","9"],
+      ["10","REFRESCO EN BOTELLA","Coca-Cola, Pepsi, Sprite, Fanta y Manzanita Sol. Botella de vidrio de 500 ml, al tiempo o fría.","Bebidas","25","","TRUE","10"],
+      ["11","AGUAS FRESCAS","Horchata, jamaica, tamarindo, limón, pepino con limón y melón. Presentación de 1 litro.","Bebidas","45","","TRUE","11"],
+      ["12","LIMONADA ESPECIAL","Limón recién exprimido, agua fría, un toque de azúcar, hielo y hojas de hierbabuena. Presentación de 700 ml.","Bebidas","45","","TRUE","12"],
+      ["13","CERVEZAS","Corona Extra, Modelo Especial, Victoria, Indio y Tecate. Corona Extra, Modelo Especial, Victoria e Indio en botella de 355 ml; Tecate en botella de 300 ml.","Bebidas","55","","TRUE","13"]
+    ];
+
+    // Convierte CSV en filas, respetando comas dentro de comillas.
+    function parseCSV(text) {
+      const rows = [];
+      let row = [], value = "", quoted = false;
+
+      for (let i = 0; i < text.length; i++) {
+        const char = text[i];
+        if (char === '"' && text[i + 1] === '"' && quoted) {
+          value += '"';
+          i++;
+        } else if (char === '"') {
+          quoted = !quoted;
+        } else if (char === "," && !quoted) {
+          row.push(value.trim());
+          value = "";
+        } else if ((char === "\n" || char === "\r") && !quoted) {
+          if (char === "\r" && text[i + 1] === "\n") i++;
+          row.push(value.trim());
+          if (row.some(cell => cell !== "")) rows.push(row);
+          row = [];
+          value = "";
+        } else {
+          value += char;
+        }
+      }
+
+      row.push(value.trim());
+      if (row.some(cell => cell !== "")) rows.push(row);
+      return rows;
+    }
+
+    function escapeHTML(value) {
+      return String(value ?? "").replace(/[&<>"']/g, char => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;",
+        '"': "&quot;", "'": "&#039;"
+      })[char]);
+    }
+
+    function renderProducts(products) {
+      const grid = document.getElementById("menu-grid");
+      grid.innerHTML = "";
+
+      const visible = products
+        .filter(p => p[1] && p[6]?.toUpperCase() !== "FALSE")
+        .sort((a, b) => Number(a[7] || 999) - Number(b[7] || 999));
+
+      visible.forEach(product => {
+        const [id, name, description, category, price, image] = product;
+        const card = document.createElement("button");
+        card.className = "product-card";
+        card.type = "button";
+        card.setAttribute("aria-label", `Ver ${name}`);
+
+        const safeName = escapeHTML(name);
+        const safeDescription = escapeHTML(description);
+        const safePrice = escapeHTML(price);
+        const safeImage = escapeHTML(image);
+
+        card.innerHTML = `
+          <span class="product-photo">
+            ${safeImage
+              ? `<img src="${safeImage}" alt="${safeName}" loading="lazy">`
+              : `<span class="photo-pending">Fotografía<br>del platillo</span>`}
+          </span>
+          <span class="product-details">
+            <span class="product-category">${escapeHTML(category || "TRES AMIGOS")}</span>
+            <strong class="product-name">${safeName}</strong>
+            <span class="product-description">${safeDescription}</span>
+            <span class="product-price">$${safePrice} MXN</span>
+          </span>
+        `;
+
+        card.addEventListener("click", () => openProduct(product));
+        grid.appendChild(card);
+      });
+
+      if (!visible.length) {
+        grid.innerHTML = '<p class="loading">No hay platillos disponibles.</p>';
+      }
+    }
+
+    const productModal = document.getElementById("product-modal");
+    const modalCard = document.getElementById("modal-card");
+
+    function openProduct(product) {
+      const [, name, description, , price, image] = product;
+      document.getElementById("modal-name").textContent = name;
+      document.getElementById("modal-description").textContent = description;
+      document.getElementById("modal-price").textContent = `$${price} MXN`;
+
+      const modalImage = document.getElementById("modal-image");
+      if (image) {
+        modalImage.src = image;
+        modalImage.alt = name;
+        modalImage.style.display = "block";
+      } else {
+        modalImage.removeAttribute("src");
+        modalImage.alt = "Fotografía pendiente";
+        modalImage.style.display = "none";
+      }
+
+      productModal.classList.add("is-open");
+      productModal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("no-scroll");
+
+      modalCard.classList.remove("turn-in");
+      void modalCard.offsetWidth;
+      modalCard.classList.add("turn-in");
+    }
+
+    function closeProduct() {
+      productModal.classList.remove("is-open");
+      productModal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("no-scroll");
+    }
+
+    document.getElementById("close-product")
+      .addEventListener("click", closeProduct);
+
+    productModal.addEventListener("click", event => {
+      if (event.target === productModal) closeProduct();
+    });
+
+    const fullMenuModal = document.getElementById("full-menu-modal");
+
+    document.getElementById("open-full-menu").addEventListener("click", () => {
+      fullMenuModal.classList.add("is-open");
+      fullMenuModal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("no-scroll");
+    });
+
+    function closeFullMenu() {
+      fullMenuModal.classList.remove("is-open");
+      fullMenuModal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("no-scroll");
+    }
+
+    document.getElementById("close-full-menu")
+      .addEventListener("click", closeFullMenu);
+
+    fullMenuModal.addEventListener("click", event => {
+      if (event.target === fullMenuModal) closeFullMenu();
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") {
+        closeProduct();
+        closeFullMenu();
+      }
+    });
+
+    async function loadMenu() {
+      try {
+        const response = await fetch(SHEET_CSV);
+        if (!response.ok) throw new Error("No se pudo leer Google Sheets");
+
+        const csv = await response.text();
+        const rows = parseCSV(csv);
+        const dataRows = rows.slice(1);
+
+        if (!dataRows.length) throw new Error("La hoja no tiene productos");
+
+        renderProducts(dataRows);
+      } catch (error) {
+        console.warn(error);
+        renderProducts(fallbackProducts);
+      }
+    }
+
+    loadMenu();
+  </script>
 
 </body>
 </html>
