@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --red: #e51d35;
+  --red: #ed1c35;
   --red-dark: #bd1429;
   --yellow: #ffc629;
   --cream: #fff8e9;
@@ -35,6 +35,8 @@ body.no-scroll {
 button, a {
   font: inherit;
 }
+
+/* ENCABEZADO */
 
 .hero {
   min-height: 560px;
@@ -105,11 +107,15 @@ button, a {
 }
 
 @keyframes logo-float {
-  0%, 100% { transform: translateY(0) rotate(-1deg); }
-  50% { transform: translateY(-10px) rotate(1deg); }
+  0%, 100% {
+    transform: translateY(0) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
 }
 
-/* SECCIÓN DE PRODUCTOS */
+/* SECCIÓN DE PLATILLOS */
 
 .menu-section {
   max-width: 1250px;
@@ -163,13 +169,20 @@ button, a {
   display: flex;
   flex-direction: column;
   color: inherit;
-  transition: transform .25s ease, box-shadow .25s ease;
   padding: 0;
+  transition: transform .25s ease, box-shadow .25s ease;
 }
 
 .product-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 13px 30px rgba(65, 39, 22, .16);
+}
+
+.product-card:focus-visible,
+.complete-button:focus-visible,
+.modal-close:focus-visible {
+  outline: 3px solid var(--yellow);
+  outline-offset: 4px;
 }
 
 .product-photo {
@@ -283,7 +296,7 @@ button, a {
   font-size: 20px;
 }
 
-/* MODAL Y GIRO 3D */
+/* MODAL DE PRODUCTO Y VISOR DE MENÚ */
 
 .modal,
 .full-menu-modal {
@@ -294,9 +307,10 @@ button, a {
   justify-content: center;
   align-items: center;
   padding: 24px;
-  background: rgba(31, 23, 19, .88);
+  background: rgba(31, 23, 19, .90);
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   transition: opacity .3s ease, visibility .3s ease;
   perspective: 1400px;
 }
@@ -305,10 +319,13 @@ button, a {
 .full-menu-modal.is-open {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 
+/* TARJETA AMPLIADA */
+
 .modal-card {
-  width: min(900px, 100%);
+  width: min(1050px, 100%);
   max-height: 92dvh;
   overflow: auto;
   background: white;
@@ -340,6 +357,23 @@ button, a {
   }
 }
 
+/* GIRO AL CERRAR */
+
+.modal.is-closing .modal-card {
+  animation: card-turn-out .45s ease-in forwards;
+}
+
+@keyframes card-turn-out {
+  0% {
+    transform: rotateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(-90deg) scale(.65);
+    opacity: 0;
+  }
+}
+
 .modal-image-wrap {
   min-height: 420px;
   padding: 25px;
@@ -352,6 +386,17 @@ button, a {
   max-width: 100%;
   max-height: 65dvh;
   object-fit: contain;
+}
+
+.modal-placeholder {
+  width: 100%;
+  min-height: 300px;
+  border-radius: 15px;
+  background: var(--cream);
+  color: #a69a8d;
+  display: grid;
+  place-items: center;
+  text-align: center;
 }
 
 .modal-info {
@@ -394,6 +439,8 @@ button, a {
   font-size: 22px;
 }
 
+/* BOTÓN CERRAR */
+
 .modal-close {
   position: absolute;
   top: 18px;
@@ -411,10 +458,10 @@ button, a {
   box-shadow: 0 3px 15px rgba(0,0,0,.2);
 }
 
-/* VISOR DE MENÚ COMPLETO */
+/* IMAGEN DEL MENÚ COMPLETO */
 
 .full-menu-modal {
-  padding: 65px 15px 20px;
+  padding: 70px 15px 20px;
 }
 
 .full-menu-image {
@@ -425,6 +472,13 @@ button, a {
   object-fit: contain;
   background: white;
   border-radius: 8px;
+}
+
+.menu-image-error {
+  display: none;
+  padding: 20px;
+  color: white;
+  text-align: center;
 }
 
 /* PIE DE PÁGINA */
@@ -445,6 +499,7 @@ button, a {
 .footer p {
   margin-top: 9px;
   font-size: 14px;
+  line-height: 1.6;
 }
 
 .footer-whatsapp {
@@ -457,6 +512,12 @@ button, a {
   text-decoration: none;
   font-size: 13px;
   font-weight: 800;
+  transition: background .2s ease, color .2s ease;
+}
+
+.footer-whatsapp:hover {
+  background: white;
+  color: var(--red);
 }
 
 .footer-line {
@@ -471,7 +532,7 @@ button, a {
   font-size: 11px;
 }
 
-/* BOTÓN FLOTANTE WHATSAPP */
+/* WHATSAPP FLOTANTE */
 
 .whatsapp-float {
   position: fixed;
@@ -488,6 +549,7 @@ button, a {
   color: white;
   box-shadow: 0 5px 20px rgba(0,0,0,.2);
   transition: transform .2s ease;
+  text-decoration: none;
 }
 
 .whatsapp-float:hover {
@@ -499,7 +561,7 @@ button, a {
   height: 37px;
 }
 
-/* TABLET */
+/* TABLETS */
 
 @media (max-width: 950px) {
   .menu-grid {
@@ -511,7 +573,7 @@ button, a {
   }
 }
 
-/* TABLET PEQUEÑA Y MÓVIL GRANDE */
+/* MÓVILES Y TABLETS PEQUEÑAS */
 
 @media (max-width: 680px) {
   .hero {
@@ -541,19 +603,29 @@ button, a {
     font-size: 11px;
   }
 
+  .modal {
+    padding: 12px;
+  }
+
   .modal-card {
     grid-template-columns: 1fr;
     width: min(520px, 100%);
     max-height: 90dvh;
+    border-radius: 18px;
   }
 
   .modal-image-wrap {
-    min-height: 240px;
-    max-height: 42dvh;
+    min-height: 220px;
+    max-height: 38dvh;
+    padding: 15px;
   }
 
   .modal-image-wrap img {
-    max-height: 38dvh;
+    max-height: 35dvh;
+  }
+
+  .modal-placeholder {
+    min-height: 180px;
   }
 
   .modal-info {
@@ -572,6 +644,17 @@ button, a {
   .modal-info strong {
     margin-top: 15px;
     font-size: 19px;
+  }
+
+  .modal-close {
+    top: 10px;
+    right: 10px;
+    width: 43px;
+    height: 43px;
+  }
+
+  .full-menu-modal {
+    padding: 65px 8px 12px;
   }
 }
 
@@ -619,10 +702,38 @@ button, a {
   }
 }
 
-/* RESPETA LA PREFERENCIA DE MOVIMIENTO DEL DISPOSITIVO */
+/* PANTALLA HORIZONTAL */
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .modal-card {
+    grid-template-columns: 1fr 1fr;
+    max-height: 88dvh;
+    overflow-y: auto;
+  }
+
+  .modal-image-wrap {
+    min-height: 200px;
+  }
+
+  .modal-image-wrap img {
+    max-height: 65dvh;
+  }
+
+  .modal-info {
+    padding: 20px;
+  }
+
+  .modal-info p {
+    font-size: 14px;
+  }
+}
+
+/* ACCESIBILIDAD: MENOS MOVIMIENTO */
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     scroll-behavior: auto !important;
     animation-duration: .01ms !important;
     transition-duration: .01ms !important;
