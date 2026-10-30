@@ -1,163 +1,320 @@
 <!DOCTYPE html>
-<html lang="es-MX">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#000000">
-  <meta name="description" content="Menú de Entre Amigos Comida Rápida">
-  <title>Entre Amigos | Menú</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <title>Tres Amigos | Nuestro Menú</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <main class="menu-page">
-    <section class="productos-section" aria-labelledby="titulo-menu">
-      <h1 id="titulo-menu">Menú Entre Amigos</h1>
-      <p id="estado-menu" role="status">Cargando menú...</p>
-      <div id="lista-productos" class="lista-productos"></div>
-    </section>
 
-    <details class="menu-original">
-      <summary>Ver menú original completo</summary>
-      <img
-        class="menu-image"
-        src="menu.entreamigos-4k.jpeg"
-        alt="Menú original de Entre Amigos Comida Rápida">
-    </details>
-  </main>
+<header class="hero">
 
-  <a class="whatsapp-float"
-     href="https://wa.me/527229395466"
-     target="_blank"
-     rel="noopener noreferrer"
-     aria-label="Contactar por WhatsApp">
-    <svg viewBox="0 0 32 32" aria-hidden="true">
-      <path fill="currentColor" d="M16 3C8.9 3 3.2 8.7 3.2 15.8c0 2.3.6 4.5 1.8 6.4L3 29l7-1.8c1.8 1 3.9 1.5 6 1.5 7.1 0 12.8-5.7 12.8-12.8C28.8 8.8 23.1 3 16 3zm0 23.4c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4 0 1.1-3.8-.3-.4a10.5 10.5 0 1 1 9 5.9zm5.9-7.9c-.3-.1-1.6-.8-1.9-.9-.2-.1-.4-.1-.6.2-.2.2-.7.9-.9 1.1-.1.2-.3.2-.6.1-.2-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.6-1.5-1.9-.1-.2 0-.4.1-.5l.4-.5c.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.3s1 2.7 1.1 2.9c.1.2 2 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.7.1.5-.1 1.6-.7 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.2-.3-.3-.6-.4z"/>
+  <div class="decor decor-one"></div>
+  <div class="decor decor-two"></div>
+
+  <div class="welcome">Bienvenido, siéntete como en casa.</div>
+
+  <div class="brand-logo">
+
+    <svg class="logo-art" viewBox="0 0 340 190" role="img" aria-label="Tres amigos y una hamburguesa">
+
+      <!-- Amigo izquierdo -->
+      <g class="friend friend-left">
+        <circle cx="76" cy="48" r="19"/>
+        <path d="M42 132 Q43 82 76 78 Q109 82 110 132 Z"/>
+        <path class="shirt-detail" d="M57 91 L76 111 L95 91"/>
+      </g>
+
+      <!-- Amigo derecho -->
+      <g class="friend friend-right">
+        <circle cx="264" cy="48" r="19"/>
+        <path d="M230 132 Q231 82 264 78 Q297 82 298 132 Z"/>
+        <path class="shirt-detail" d="M245 91 L264 111 L283 91"/>
+      </g>
+
+      <!-- Amigo del centro -->
+      <g class="friend friend-center">
+        <circle cx="170" cy="35" r="21"/>
+        <path d="M132 132 Q133 75 170 73 Q207 75 208 132 Z"/>
+        <path class="shirt-detail" d="M147 88 L170 111 L193 88"/>
+      </g>
+
+      <!-- Hamburguesa central -->
+      <g class="burger-mark">
+        <path d="M112 126 Q116 91 170 91 Q224 91 228 126 Z"/>
+        <path d="M111 130 H229 Q225 143 213 143 H127 Q115 143 111 130 Z"/>
+        <path d="M119 148 H221 Q216 161 204 161 H136 Q124 161 119 148 Z"/>
+        <path d="M111 126 H229" class="burger-line"/>
+        <path d="M125 137 H215" class="burger-line"/>
+        <circle cx="148" cy="105" r="2"/>
+        <circle cx="169" cy="101" r="2"/>
+        <circle cx="190" cy="106" r="2"/>
+      </g>
     </svg>
-  </a>
 
-  <script>
-    const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTPkiv0pOXPkAyspOVpzbPs5tBRakvpL3RDz5Mh67MGc81JY0sjIBcmyPNZ5XElpT11xHiMRODMobE_/pub?gid=0&single=true&output=csv';
+    <div class="brand-name">Tres Amigos</div>
+    <div class="brand-subtitle">BURGERS & FRIENDS</div>
+    <div class="brand-line"></div>
+  </div>
 
-    const estado = document.getElementById('estado-menu');
-    const lista = document.getElementById('lista-productos');
+  <h1>Nuestro Menú</h1>
 
-    function analizarCSV(texto) {
-      const filas = [];
-      let fila = [];
-      let celda = '';
-      let comillas = false;
+  <p class="order-message">
+    Para ordenar, nuestros meseros están disponibles
+    en cuanto usted lo solicite.
+  </p>
 
-      for (let i = 0; i < texto.length; i++) {
-        const caracter = texto[i];
+  <a href="#menu" class="scroll-link">DESCUBRE NUESTRO MENÚ <span>↓</span></a>
+</header>
 
-        if (caracter === '"') {
-          if (comillas && texto[i + 1] === '"') {
-            celda += '"';
-            i++;
-          } else {
-            comillas = !comillas;
-          }
-        } else if (caracter === ',' && !comillas) {
-          fila.push(celda);
-          celda = '';
-        } else if ((caracter === '\n' || caracter === '\r') && !comillas) {
-          if (caracter === '\r' && texto[i + 1] === '\n') i++;
-          fila.push(celda);
-          if (fila.some(valor => valor.trim() !== '')) filas.push(fila);
-          fila = [];
-          celda = '';
-        } else {
-          celda += caracter;
-        }
-      }
 
-      fila.push(celda);
-      if (fila.some(valor => valor.trim() !== '')) filas.push(fila);
+<main id="menu" class="menu-container">
 
-      if (!filas.length) return [];
+  <section class="menu-section">
+    <h2>Hamburguesas <span>🍔</span></h2>
 
-      const encabezados = filas[0].map(valor =>
-        valor.replace(/^\uFEFF/, '').trim().toLowerCase()
-      );
+    <div class="product-grid">
 
-      return filas.slice(1).map(valores => {
-        const producto = {};
-        encabezados.forEach((encabezado, indice) => {
-          producto[encabezado] = (valores[indice] || '').trim();
-        });
-        return producto;
-      });
-    }
+      <button class="product-card" data-name="LA CLÁSICA" data-price="$85 MXN"
+        data-description="Carne de res a la parrilla, queso amarillo, lechuga fresca, jitomate, cebolla y aderezo de la casa en pan con ajonjolí."
+        data-image="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1000">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=700" alt="Hamburguesa La Clásica">
+        <span class="product-info"><strong>La Clásica</strong><small>Carne de res, queso amarillo y vegetales frescos.</small><b>$85 MXN</b></span>
+      </button>
 
-    function campo(producto, nombre) {
-      const clave = Object.keys(producto).find(
-        k => k.normalize('NFD').replace(/[\u0300-\u036f]/g, '') === nombre
-      );
-      return clave ? producto[clave] : '';
-    }
+      <button class="product-card" data-name="DELICIOUS BBQ" data-price="$97 MXN"
+        data-description="Carne de res jugosa, queso cheddar, tocino crujiente y salsa BBQ ahumada, servidos en pan suave tostado."
+        data-image="https://images.unsplash.com/photo-1553979459-d2229ba7433a?w=1000">
+        <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433a?w=700" alt="Hamburguesa Delicious BBQ">
+        <span class="product-info"><strong>Delicious BBQ</strong><small>Carne de res, cheddar, tocino y salsa BBQ.</small><b>$97 MXN</b></span>
+      </button>
 
-    function mostrarError(mensaje) {
-      estado.textContent = mensaje;
-    }
+      <button class="product-card" data-name="POLLO MEXICAN" data-price="$89 MXN"
+        data-description="Pechuga de pollo crujiente, queso manchego, aguacate, lechuga, jitomate y un toque de mayonesa con chipotle en pan dorado."
+        data-image="https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=1000">
+        <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=700" alt="Hamburguesa Pollo Mexican">
+        <span class="product-info"><strong>Pollo Mexican</strong><small>Pollo crujiente, manchego, aguacate y chipotle.</small><b>$89 MXN</b></span>
+      </button>
 
-    async function cargarMenu() {
-      try {
-        if (CSV_URL === 'PEGA_AQUI_TU_ENLACE_CSV') {
-          throw new Error('Falta configurar el enlace CSV.');
-        }
+    </div>
+  </section>
 
-        const respuesta = await fetch(CSV_URL);
-        if (!respuesta.ok) throw new Error('No se pudo consultar el menú.');
 
-        const texto = await respuesta.text();
-        const productos = analizarCSV(texto);
+  <section class="menu-section">
+    <h2>Alitas <span>🔥</span></h2>
 
-        const visibles = productos.filter(producto => {
-          const disponible = String(campo(producto, 'disponible')).toLowerCase();
-          return ['true', 'verdadero', 'sí', 'si', '1'].includes(disponible);
-        });
+    <div class="product-grid">
 
-        lista.replaceChildren();
+      <button class="product-card" data-name="PIKOSITAS BBQ" data-price="$120 MXN"
+        data-description="12 piezas de alitas doradas bañadas en salsa BBQ con un toque picante, especias y un sabor ahumado intenso."
+        data-image="https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=1000">
+        <img src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=700" alt="Alitas Pikositas BBQ">
+        <span class="product-info"><strong>Pikositas BBQ</strong><small>12 piezas de alitas BBQ con un toque picante.</small><b>$120 MXN</b></span>
+      </button>
 
-        if (!visibles.length) {
-          mostrarError('No hay platillos disponibles o falta revisar la columna Disponible.');
-          return;
-        }
+      <button class="product-card" data-name="DULCES AMIGAS BBQ" data-price="$120 MXN"
+        data-description="12 piezas de alitas crujientes cubiertas con salsa BBQ dulce, un toque de miel y especias para equilibrar cada bocado."
+        data-image="https://images.unsplash.com/photo-1608039829572-78524f79c4c7?w=1000">
+        <img src="https://images.unsplash.com/photo-1608039829572-78524f79c4c7?w=700" alt="Alitas Dulces Amigas BBQ">
+        <span class="product-info"><strong>Dulces Amigas BBQ</strong><small>12 piezas crujientes con BBQ dulce y miel.</small><b>$120 MXN</b></span>
+      </button>
 
-        visibles.forEach(producto => {
-          const tarjeta = document.createElement('article');
-          tarjeta.className = 'producto-card';
+      <button class="product-card" data-name="CRUJI-ALAS" data-price="$120 MXN"
+        data-description="12 piezas de alitas con cubierta dorada y extra crujiente, sazonadas con una mezcla de especias y acompañadas de aderezo cremoso."
+        data-image="https://images.unsplash.com/photo-1567620832903-9fc6debc209f?w=1000">
+        <img src="https://images.unsplash.com/photo-1567620832903-9fc6debc209f?w=700" alt="Cruji-Alas">
+        <span class="product-info"><strong>Cruji-Alas</strong><small>12 piezas extra crujientes con especias.</small><b>$120 MXN</b></span>
+      </button>
 
-          const nombre = document.createElement('h2');
-          nombre.textContent = campo(producto, 'nombre') || 'Platillo';
+    </div>
+  </section>
 
-          const descripcionTexto = campo(producto, 'descripcion');
-          const descripcion = document.createElement('p');
-          descripcion.className = 'producto-descripcion';
-          descripcion.textContent = descripcionTexto;
 
-          const precio = document.createElement('p');
-          precio.className = 'producto-precio';
-          const valorPrecio = campo(producto, 'precio');
-          precio.textContent = valorPrecio
-            ? '$' + valorPrecio.replace(/^\$/, '') + ' MXN'
-            : 'Consultar precio';
+  <section class="menu-section">
+    <h2>Hot Dogs <span>🌭</span></h2>
 
-          tarjeta.append(nombre);
-          if (descripcionTexto) tarjeta.append(descripcion);
-          tarjeta.append(precio);
+    <div class="product-grid">
 
-          lista.append(tarjeta);
-        });
+      <button class="product-card" data-name="AMIGO DEL NORTE" data-price="$75 MXN"
+        data-description="Salchicha envuelta en tocino, pan suave, cebolla asada, jitomate y una combinación de mostaza, cátsup y mayonesa."
+        data-image="https://images.unsplash.com/photo-1612392062798-2dbaa6e3d7d8?w=1000">
+        <img src="https://images.unsplash.com/photo-1612392062798-2dbaa6e3d7d8?w=700" alt="Hot dog Amigo del Norte">
+        <span class="product-info"><strong>Amigo del Norte</strong><small>Salchicha con tocino y vegetales.</small><b>$75 MXN</b></span>
+      </button>
 
-        estado.textContent = 'Consulta nuestros platillos disponibles';
-      } catch (error) {
-        mostrarError('No se pudo cargar el menú. Revisa el enlace CSV y la publicación de Google Sheets.');
-        console.error(error);
-      }
-    }
+      <button class="product-card" data-name="AMIGO CHILANGO" data-price="$75 MXN"
+        data-description="Salchicha a la plancha en pan suave con jitomate, cebolla, jalapeños, mayonesa y salsa al gusto."
+        data-image="https://images.unsplash.com/photo-1550317138-10000687a72b?w=1000">
+        <img src="https://images.unsplash.com/photo-1550317138-10000687a72b?w=700" alt="Hot dog Amigo Chilango">
+        <span class="product-info"><strong>Amigo Chilango</strong><small>Salchicha, jalapeños y salsa al gusto.</small><b>$75 MXN</b></span>
+      </button>
 
-    cargarMenu();
-  </script>
+    </div>
+  </section>
+
+
+  <section class="menu-section">
+    <h2>Bebidas <span>🥤</span></h2>
+
+    <div class="product-grid">
+
+      <button class="product-card" data-name="REFRESCO EN LATA" data-price="$25 MXN"
+        data-description="Coca-Cola, Pepsi, Sprite, Fanta y Manzanita Sol. Lata de 235 ml, al tiempo o fría."
+        data-image="https://images.unsplash.com/photo-1581636625402-29b2a704ef13?w=1000">
+        <img src="https://images.unsplash.com/photo-1581636625402-29b2a704ef13?w=700" alt="Refrescos en lata">
+        <span class="product-info"><strong>Refresco en lata</strong><small>235 ml · Al tiempo o fría.</small><b>$25 MXN</b></span>
+      </button>
+
+      <button class="product-card" data-name="REFRESCO EN BOTELLA" data-price="$25 MXN"
+        data-description="Coca-Cola, Pepsi, Sprite, Fanta y Manzanita Sol. Botella de vidrio de 500 ml, al tiempo o fría."
+        data-image="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=1000">
+        <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=700" alt="Refrescos en botella">
+        <span class="product-info"><strong>Refresco en botella</strong><small>Botella de vidrio de 500 ml.</small><b>$25 MXN</b></span>
+      </button>
+
+      <button class="product-card" data-name="AGUAS FRESCAS" data-price="$45 MXN"
+        data-description="Horchata, jamaica, tamarindo, limón, pepino con limón y melón. Presentación de 1 litro."
+        data-image="https://images.unsplash.com/photo-1513558161293-cdaf765edfd4?w=1000">
+        <img src="https://images.unsplash.com/photo-1513558161293-cdaf765edfd4?w=700" alt="Aguas frescas">
+        <span class="product-info"><strong>Aguas frescas</strong><small>Horchata, jamaica, tamarindo, limón, pepino con limón y melón. 1 litro.</small><b>$45 MXN</b></span>
+      </button>
+
+      <button class="product-card" data-name="LIMONADA ESPECIAL" data-price="$45 MXN"
+        data-description="Limón recién exprimido, agua fría, un toque de azúcar, hielo y hojas de hierbabuena. Presentación de 700 ml."
+        data-image="https://images.unsplash.com/photo-1513558161293-cdaf765edfd4?w=1000">
+        <img src="https://images.unsplash.com/photo-1513558161293-cdaf765edfd4?w=700" alt="Limonada especial">
+        <span class="product-info"><strong>Limonada especial</strong><small>Limón, hielo y hierbabuena. 700 ml.</small><b>$45 MXN</b></span>
+      </button>
+
+      <button class="product-card" data-name="CERVEZAS" data-price="$55 MXN"
+        data-description="Corona Extra, Modelo Especial, Victoria e Indio en botella de 355 ml; Tecate en botella de 300 ml."
+        data-image="https://images.unsplash.com/photo-1608270586620-248524c67de9?w=1000">
+        <img src="https://images.unsplash.com/photo-1608270586620-248524c67de9?w=700" alt="Cervezas">
+        <span class="product-info"><strong>Cervezas</strong><small>Corona Extra, Modelo Especial, Victoria, Indio y Tecate.</small><b>$55 MXN</b></span>
+      </button>
+
+    </div>
+  </section>
+
+  <div class="full-menu-area">
+    <button class="full-menu-button" id="openFullMenu">☰ VER MENÚ COMPLETO <span>＋</span></button>
+  </div>
+
+</main>
+
+
+<footer class="footer">
+  <div class="footer-brand">Tres Amigos</div>
+  <h2>Gracias por tu visita amigo</h2>
+  <p>Comparte con nosotros tu experiencia y comentarios en nuestro WhatsApp.</p>
+  <div class="footer-heart">♥</div>
+</footer>
+
+
+<a class="whatsapp-float" href="https://wa.me/520123456789" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true">
+    <path fill="currentColor" d="M16 .8A15.1 15.1 0 0 0 3.1 23.8L1 31l7.4-1.9A15.2 15.2 0 1 0 16 .8Zm0 27.5c-2.3 0-4.5-.6-6.4-1.8l-.5-.3-4.4 1.1 1.2-4.3-.3-.5A12.4 12.4 0 1 1 16 28.3Zm6.8-9.3c-.4-.2-2.2-1.1-2.6-1.2-.3-.1-.6-.2-.8.2-.3.4-1 1.2-1.2 1.4-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.8 5.2.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.1-.3-.2-.7-.4Z"/>
+  </svg>
+</a>
+
+
+<!-- Ventana ampliada de cada platillo -->
+<dialog id="productDialog" class="product-dialog">
+  <button class="dialog-close" id="closeProduct" aria-label="Cerrar">×</button>
+  <div class="dialog-content">
+    <img id="dialogImage" src="" alt="">
+    <div class="dialog-text">
+      <span class="dialog-label">TRES AMIGOS</span>
+      <h2 id="dialogName"></h2>
+      <p id="dialogDescription"></p>
+      <strong id="dialogPrice"></strong>
+    </div>
+  </div>
+</dialog>
+
+
+<!-- Menú completo a pantalla completa -->
+<dialog id="fullMenuDialog" class="full-menu-dialog">
+  <button class="dialog-close" id="closeFullMenu" aria-label="Cerrar">×</button>
+  <div class="full-menu-content">
+    <div class="mini-logo">🍔 TRES AMIGOS</div>
+    <p class="mini-subtitle">BUENOS AMIGOS · GRANDES MOMENTOS</p>
+
+    <h2>MENÚ COMPLETO</h2>
+
+    <div class="complete-menu-list">
+      <h3>HAMBURGUESAS</h3>
+      <p>La Clásica <b>$85</b></p>
+      <p>Delicious BBQ <b>$97</b></p>
+      <p>Pollo Mexican <b>$89</b></p>
+
+      <h3>ALITAS · 12 PIEZAS</h3>
+      <p>Pikositas BBQ <b>$120</b></p>
+      <p>Dulces Amigas BBQ <b>$120</b></p>
+      <p>Cruji-Alas <b>$120</b></p>
+
+      <h3>HOT DOGS</h3>
+      <p>Amigo del Norte <b>$75</b></p>
+      <p>Amigo Chilango <b>$75</b></p>
+
+      <h3>BEBIDAS</h3>
+      <p>Refresco en lata · 235 ml <b>$25</b></p>
+      <p>Refresco en botella · 500 ml <b>$25</b></p>
+      <p>Aguas frescas · 1 litro <b>$45</b></p>
+      <p>Limonada especial · 700 ml <b>$45</b></p>
+      <p>Cervezas <b>$55</b></p>
+      <small>Corona Extra, Modelo Especial, Victoria e Indio: 355 ml. Tecate: 300 ml.</small>
+    </div>
+
+    <p class="menu-note">Precios en moneda nacional (MXN).</p>
+    <a href="https://wa.me/520123456789" class="menu-whatsapp" target="_blank" rel="noopener">CONTACTAR POR WHATSAPP</a>
+  </div>
+</dialog>
+
+
+<script>
+  const productDialog = document.getElementById("productDialog");
+  const productCards = document.querySelectorAll(".product-card");
+
+  productCards.forEach(card => {
+    card.addEventListener("click", () => {
+      document.getElementById("dialogName").textContent = card.dataset.name;
+      document.getElementById("dialogDescription").textContent = card.dataset.description;
+      document.getElementById("dialogPrice").textContent = card.dataset.price;
+      document.getElementById("dialogImage").src = card.dataset.image;
+      document.getElementById("dialogImage").alt = card.dataset.name;
+      productDialog.showModal();
+    });
+  });
+
+  document.getElementById("closeProduct").addEventListener("click", () => {
+    productDialog.close();
+  });
+
+  productDialog.addEventListener("click", event => {
+    if (event.target === productDialog) productDialog.close();
+  });
+
+  const fullMenuDialog = document.getElementById("fullMenuDialog");
+
+  document.getElementById("openFullMenu").addEventListener("click", () => {
+    fullMenuDialog.showModal();
+  });
+
+  document.getElementById("closeFullMenu").addEventListener("click", () => {
+    fullMenuDialog.close();
+  });
+
+  fullMenuDialog.addEventListener("click", event => {
+    if (event.target === fullMenuDialog) fullMenuDialog.close();
+  });
+</script>
+
 </body>
 </html>
