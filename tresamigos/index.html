@@ -2,629 +2,454 @@
 <html lang="es-MX">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ed1c35">
-  <meta name="description" content="Menú digital de Tres Amigos.">
-  <title>Tres Amigos | Menú Digital</title>
+  <meta name="description" content="Menú digital de Tres Amigos. Hamburguesas, alitas, snacks y bebidas.">
+  <title>Tres Amigos | Menú digital</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="ambient ambient-three"></div>
+  <div class="noise"></div>
 
-  <!-- PANTALLA DE BIENVENIDA -->
-  <section class="welcome-screen" id="welcomeScreen">
-    <div class="welcome-decoration welcome-decoration-one"></div>
-    <div class="welcome-decoration welcome-decoration-two"></div>
-
+  <div class="welcome-screen" id="welcome-screen">
+    <div class="welcome-orbit"></div>
     <div class="welcome-content">
+      <div class="welcome-mark">TA</div>
+      <p>UNA EXPERIENCIA PARA DISFRUTAR</p>
+      <h1>TRES AMIGOS</h1>
+      <span>El sabor de buenos momentos</span>
+      <button id="enter-site" type="button">ENTRAR AL MENÚ <span>↗</span></button>
+    </div>
+  </div>
 
-      <!-- LOGO SVG INTEGRADO -->
-      <div class="logo-wrap">
-        <svg class="tres-amigos-logo" viewBox="0 0 440 250"
+  <main id="site-content">
+    <header class="hero">
+      <div class="hero-glow"></div>
+      <div class="top-tag reveal">BIENVENIDOS A NUESTRA CASA</div>
+
+      <div class="logo-animation reveal">
+        <div class="logo-aura"></div>
+        <svg class="logo-art" viewBox="0 0 360 210"
              xmlns="http://www.w3.org/2000/svg"
-             role="img" aria-label="Tres Amigos">
-
-          <defs>
-            <linearGradient id="logoRed" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#ff4655"/>
-              <stop offset="100%" stop-color="#bd1429"/>
-            </linearGradient>
-            <filter id="logoShadow" x="-30%" y="-30%" width="160%" height="160%">
-              <feDropShadow dx="0" dy="5" stdDeviation="4"
-                            flood-color="#542719" flood-opacity=".25"/>
-            </filter>
-          </defs>
-
-          <g filter="url(#logoShadow)">
-            <path d="M220 12 C165 12 105 28 72 69
-                     C38 111 48 172 91 202
-                     C124 226 174 235 220 235
-                     C266 235 316 226 349 202
-                     C392 172 402 111 368 69
-                     C335 28 275 12 220 12Z"
-                  fill="#fff8e9" stroke="#542719" stroke-width="8"/>
-
-            <path d="M220 25 C167 25 115 39 85 75
-                     C58 108 65 162 101 188
-                     C132 210 178 220 220 220
-                     C262 220 308 210 339 188
-                     C375 162 382 108 355 75
-                     C325 39 273 25 220 25Z"
-                  fill="url(#logoRed)" stroke="#ffc629" stroke-width="5"/>
-
-            <g fill="#ffc629">
-              <circle cx="220" cy="48" r="7"/>
-              <circle cx="102" cy="122" r="5"/>
-              <circle cx="338" cy="122" r="5"/>
-            </g>
-
-            <text x="220" y="105" text-anchor="middle"
-                  font-family="Manrope, sans-serif"
-                  font-size="29" font-weight="900"
-                  fill="#fff8e9" letter-spacing="5">TRES</text>
-
-            <text x="220" y="159" text-anchor="middle"
-                  font-family="Manrope, sans-serif"
-                  font-size="57" font-weight="900"
-                  fill="#ffffff" stroke="#542719"
-                  stroke-width="1.5" paint-order="stroke"
-                  letter-spacing="-2">AMIGOS</text>
-
-            <path d="M125 176 Q220 197 315 176"
-                  fill="none" stroke="#ffc629" stroke-width="5"
-                  stroke-linecap="round"/>
-
-            <text x="220" y="202" text-anchor="middle"
-                  font-family="DM Sans, sans-serif"
-                  font-size="12" font-weight="800"
-                  fill="#fff8e9" letter-spacing="3">MENÚ DIGITAL</text>
+             role="img" aria-label="Tres amigos y una hamburguesa">
+          <g stroke="#542719" stroke-width="5" stroke-linejoin="round">
+            <path d="M145 48 Q145 13 180 13 Q215 13 215 48Z" fill="#F8B323"/>
+            <path d="M143 52H217"/>
+          </g>
+          <g>
+            <circle cx="83" cy="91" r="23" fill="#F4C6A0"/>
+            <path d="M60 88Q61 55 85 59Q107 59 106 87Q93 75 75 79Z" fill="#542719"/>
+            <path d="M40 178Q38 125 83 125Q128 125 127 178Z" fill="#E51D35"/>
+          </g>
+          <g>
+            <circle cx="180" cy="91" r="25" fill="#F4C6A0"/>
+            <path d="M154 87Q153 51 181 54Q207 54 206 87Q189 72 164 80Z" fill="#542719"/>
+            <path d="M153 58Q180 34 207 58L205 68Q180 58 155 68Z" fill="#E51D35"/>
+            <path d="M137 178Q137 122 180 122Q223 122 223 178Z" fill="#F8B323"/>
+          </g>
+          <g>
+            <circle cx="277" cy="91" r="23" fill="#F4C6A0"/>
+            <path d="M254 88Q255 55 278 59Q301 59 300 87Q284 76 267 80Z" fill="#542719"/>
+            <path d="M233 178Q232 125 277 125Q322 125 320 178Z" fill="#E51D35"/>
+          </g>
+          <g stroke="#542719" stroke-width="4" stroke-linejoin="round">
+            <path d="M137 143Q137 117 180 117Q223 117 223 143Z" fill="#F8B323"/>
+            <path d="M139 147H221" stroke="#5B9D45"/>
+            <path d="M139 153H221" stroke="#E51D35"/>
+            <path d="M137 158Q180 168 223 158L220 170Q180 181 140 170Z" fill="#F8B323"/>
           </g>
         </svg>
       </div>
 
-      <p class="welcome-label">BIENVENIDO A</p>
-      <h1>Tres Amigos</h1>
-      <p class="welcome-description">
-        Tu antojo comienza aquí.
+      <p class="welcome">¡Qué gusto tenerte aquí!</p>
+      <h1 class="brand-name reveal">Tres Amigos</h1>
+      <div class="brand-divider"></div>
+      <h2 class="menu-heading reveal">MENÚ DIGITAL</h2>
+      <p class="intro reveal">
+        Elige tus platillos y bebidas favoritos. Enseguida que lo solicites,
+        uno de nuestros meseros tomará tu orden.
       </p>
 
-      <button class="enter-button" id="enterButton">
-        <span>ENTRAR AL MENÚ</span>
-        <span class="enter-arrow">→</span>
-      </button>
-
-      <p class="welcome-audio-note">
-        <span class="audio-dot"></span>
-        Activa el sonido para escuchar la bienvenida
-      </p>
-    </div>
-  </section>
-
-
-  <!-- CONTENIDO PRINCIPAL -->
-  <main id="mainContent" class="main-content">
-
-    <header class="top-header">
-      <a href="#" class="header-brand" aria-label="Tres Amigos">
-        <svg class="header-logo" viewBox="0 0 440 250"
-             xmlns="http://www.w3.org/2000/svg" role="img"
-             aria-label="Tres Amigos">
-          <path d="M220 12 C165 12 105 28 72 69
-                   C38 111 48 172 91 202
-                   C124 226 174 235 220 235
-                   C266 235 316 226 349 202
-                   C392 172 402 111 368 69
-                   C335 28 275 12 220 12Z"
-                fill="#fff8e9" stroke="#542719" stroke-width="8"/>
-          <path d="M220 25 C167 25 115 39 85 75
-                   C58 108 65 162 101 188
-                   C132 210 178 220 220 220
-                   C262 220 308 210 339 188
-                   C375 162 382 108 355 75
-                   C325 39 273 25 220 25Z"
-                fill="#ed1c35" stroke="#ffc629" stroke-width="5"/>
-          <text x="220" y="105" text-anchor="middle"
-                font-family="Manrope,sans-serif" font-size="29"
-                font-weight="900" fill="#fff8e9"
-                letter-spacing="5">TRES</text>
-          <text x="220" y="159" text-anchor="middle"
-                font-family="Manrope,sans-serif" font-size="57"
-                font-weight="900" fill="#fff"
-                letter-spacing="-2">AMIGOS</text>
-          <path d="M125 176 Q220 197 315 176"
-                fill="none" stroke="#ffc629" stroke-width="5"
-                stroke-linecap="round"/>
-          <text x="220" y="202" text-anchor="middle"
-                font-family="DM Sans,sans-serif" font-size="12"
-                font-weight="800" fill="#fff8e9"
-                letter-spacing="3">MENÚ DIGITAL</text>
-        </svg>
-      </a>
-
-      <button class="menu-image-button" id="openFullMenu">
-        <span>Ver menú completo</span>
-        <span aria-hidden="true">☰</span>
-      </button>
+      <div class="hero-actions reveal">
+        <button class="audio-button" id="play-welcome" type="button">
+          <span class="audio-icon">♫</span>
+          <span id="audio-label">Escuchar bienvenida</span>
+          <span class="audio-pulse"></span>
+        </button>
+        <a href="#menu" class="explore-button">EXPLORAR MENÚ <span>↓</span></a>
+      </div>
+      <div class="scroll-indicator"><span></span></div>
     </header>
 
-
-    <section class="hero-section">
-      <div class="hero-copy">
-        <span class="hero-kicker">SABOR QUE SE COMPARTE</span>
-        <h1>¡Qué bueno<br>que estás aquí!</h1>
-        <p>Descubre tus favoritos y disfruta cada momento.</p>
-        <a href="#productsSection" class="hero-button">
-          EXPLORAR MENÚ <span>↓</span>
-        </a>
+    <section class="menu-section" id="menu">
+      <div class="section-heading reveal">
+        <span class="eyebrow">HECHO PARA DISFRUTAR</span>
+        <h2>Descubre nuestros <span>sabores</span></h2>
+        <p>Elige tu favorito y descubre lo que tenemos para ti.</p>
+        <div class="heading-decoration"></div>
       </div>
-      <div class="hero-art">
-        <div class="hero-circle hero-circle-one"></div>
-        <div class="hero-circle hero-circle-two"></div>
-        <div class="hero-sticker">¡BUEN<br>PROVECHO!</div>
-        <div class="hero-emoji" aria-hidden="true">🍔</div>
+
+      <div id="menu-grid" class="menu-grid">
+        <p class="loading">Preparando nuestro menú...</p>
       </div>
     </section>
 
-
-    <section class="menu-heading" id="productsSection">
-      <div>
-        <span class="section-kicker">DESCUBRE NUESTROS SABORES</span>
-        <h2>Nuestro menú</h2>
-        <p>Elige lo que más se te antoje.</p>
-      </div>
+    <section class="complete-menu reveal">
+      <div class="complete-decoration">✦</div>
+      <span class="eyebrow">TODO EN UN SOLO LUGAR</span>
+      <h2>¿Quieres verlo todo?</h2>
+      <p>Consulta nuestro menú completo y encuentra algo delicioso.</p>
+      <button class="complete-button" id="open-full-menu" type="button">
+        VER MENÚ COMPLETO <span>↗</span>
+      </button>
     </section>
-
-    <nav class="category-nav" aria-label="Categorías del menú">
-      <button class="category-button active" data-category="todos">Todo</button>
-      <button class="category-button" data-category="hamburguesas">Hamburguesas</button>
-      <button class="category-button" data-category="alitas">Alitas</button>
-      <button class="category-button" data-category="snacks">Snacks</button>
-      <button class="category-button" data-category="bebidas">Bebidas</button>
-    </nav>
-
-    <div class="loading-message" id="loadingMessage">
-      Preparando nuestro menú...
-    </div>
-
-    <section class="products-grid" id="productsGrid"
-             aria-live="polite"></section>
-
-    <section class="bottom-callout">
-      <span class="bottom-callout-icon">❤️</span>
-      <h2>¡Gracias por visitarnos!</h2>
-      <p>En Tres Amigos siempre hay algo delicioso esperándote.</p>
-    </section>
-
-    <footer class="site-footer">
-      <div class="footer-logo">
-        <svg viewBox="0 0 440 250" xmlns="http://www.w3.org/2000/svg"
-             role="img" aria-label="Tres Amigos">
-          <path d="M220 12 C165 12 105 28 72 69 C38 111 48 172 91 202 C124 226 174 235 220 235 C266 235 316 226 349 202 C392 172 402 111 368 69 C335 28 275 12 220 12Z"
-                fill="#fff8e9" stroke="#542719" stroke-width="8"/>
-          <path d="M220 25 C167 25 115 39 85 75 C58 108 65 162 101 188 C132 210 178 220 220 220 C262 220 308 210 339 188 C375 162 382 108 355 75 C325 39 273 25 220 25Z"
-                fill="#ed1c35" stroke="#ffc629" stroke-width="5"/>
-          <text x="220" y="105" text-anchor="middle" font-size="29"
-                font-weight="900" fill="#fff8e9"
-                font-family="Manrope,sans-serif" letter-spacing="5">TRES</text>
-          <text x="220" y="159" text-anchor="middle" font-size="57"
-                font-weight="900" fill="#fff"
-                font-family="Manrope,sans-serif">AMIGOS</text>
-          <text x="220" y="202" text-anchor="middle" font-size="12"
-                font-weight="800" fill="#fff8e9"
-                font-family="DM Sans,sans-serif" letter-spacing="3">MENÚ DIGITAL</text>
-        </svg>
-      </div>
-      <p>Acceso fácil, menú al instante.</p>
-      <small>© <span id="currentYear"></span> Tres Amigos</small>
-    </footer>
-
   </main>
 
+  <div class="modal" id="product-modal"
+       aria-hidden="true" role="dialog" aria-modal="true"
+       aria-labelledby="modal-name">
+    <button class="modal-close" id="close-product" type="button" aria-label="Cerrar">×</button>
+    <article class="modal-card" id="modal-card">
+      <div class="modal-image-wrap">
+        <img id="modal-image" src="" alt="">
+        <div id="modal-image-placeholder" class="modal-placeholder">Fotografía del platillo</div>
+      </div>
+      <div class="modal-info">
+        <span class="modal-label">TRES AMIGOS · HECHO CON SABOR</span>
+        <h2 id="modal-name"></h2>
+        <p id="modal-description"></p>
+        <strong id="modal-price"></strong>
+      </div>
+    </article>
+  </div>
 
-  <!-- BOTÓN FLOTANTE WHATSAPP -->
-  <a class="whatsapp-float"
-     href="https://wa.me/520123456789"
-     target="_blank" rel="noopener noreferrer"
-     aria-label="Contactar por WhatsApp">
+  <div class="full-menu-modal" id="full-menu-modal"
+       aria-hidden="true" role="dialog" aria-modal="true"
+       aria-label="Menú completo">
+    <button class="modal-close" id="close-full-menu" type="button" aria-label="Cerrar">×</button>
+    <img src="menu-tresamigos.jpg" alt="Menú completo de Tres Amigos"
+         class="full-menu-image"
+         onerror="this.style.display='none'; document.getElementById('menu-image-error').style.display='block';">
+    <p id="menu-image-error" class="menu-image-error">
+      No se encontró la imagen del menú. Revisa el nombre del archivo.
+    </p>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-orb"></div>
+    <span class="eyebrow">GRACIAS POR ELEGIRNOS</span>
+    <h2>Los buenos momentos<br>se comparten entre amigos.</h2>
+    <p>Nos encantaría conocer tus comentarios y experiencia.</p>
+    <a class="footer-whatsapp" href="https://wa.me/520123456789"
+       target="_blank" rel="noopener">
+      <span>✆</span> Envíanos tus comentarios
+    </a>
+    <div class="footer-line"></div>
+    <small>© Tres Amigos 2026 · Todos los derechos reservados</small>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/520123456789"
+     target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
     <svg viewBox="0 0 32 32" aria-hidden="true">
-      <path fill="currentColor"
-        d="M16 .8A15.1 15.1 0 0 0 3.1 23.8L1 31l7.4-1.9A15.2 15.2 0 1 0 16 .8Zm0 27.6a12.4 12.4 0 0 1-6.3-1.7l-.5-.3-4.4 1.1 1.2-4.3-.3-.5A12.4 12.4 0 1 1 16 28.4Zm6.8-9.3c-.4-.2-2.2-1.1-2.6-1.2-.3-.1-.6-.2-.8.2-.3.4-1 1.2-1.2 1.4-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.1s1.3 3.5 1.5 3.7c.2.3 2.6 4 6.3 5.6.9.4 1.6.7 2.1.8.9.3 1.7.3 2.3.2.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.2-.3-.3-.7-.5Z"/>
+      <path fill="currentColor" d="M16 .8A15.1 15.1 0 0 0 3.1 23.7L1 31l7.5-2A15.2 15.2 0 1 0 16 .8Zm0 27.5a12.3 12.3 0 0 1-6.3-1.7l-.5-.3-4.4 1.2L6 23.2l-.3-.5A12.4 12.4 0 1 1 16 28.3Zm6.8-9.3c-.4-.2-2.2-1.1-2.5-1.2-.3-.1-.6-.2-.8.2-.2.4-1 1.2-1.2 1.5-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.5-.3.4-1.2 1.2-1.2 3s1.3 3.5 1.5 3.7c.2.2 2.5 3.8 6.1 5.3.9.4 1.6.6 2.1.7.9.3 1.7.2 2.3.1.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.1-.3-.2-.7-.4Z"/>
     </svg>
   </a>
 
-
-  <!-- MODAL DE PRODUCTO -->
-  <div class="modal" id="productModal" aria-hidden="true">
-    <div class="modal-backdrop" data-close="product"></div>
-    <div class="modal-panel product-modal-panel" role="dialog"
-         aria-modal="true" aria-labelledby="modalProductName">
-      <button class="modal-close" data-close="product"
-              aria-label="Cerrar">×</button>
-      <div class="modal-product-image" id="modalProductImage"></div>
-      <div class="modal-product-info">
-        <span class="modal-category" id="modalProductCategory"></span>
-        <h2 id="modalProductName"></h2>
-        <p id="modalProductDescription"></p>
-        <strong class="modal-price" id="modalProductPrice"></strong>
-        <a class="modal-order-button"
-           href="https://wa.me/520123456789"
-           target="_blank" rel="noopener noreferrer">
-          Ordenar por WhatsApp
-        </a>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- MODAL DE MENÚ COMPLETO -->
-  <div class="modal" id="fullMenuModal" aria-hidden="true">
-    <div class="modal-backdrop" data-close="menu"></div>
-    <div class="modal-panel full-menu-panel" role="dialog"
-         aria-modal="true" aria-label="Menú completo">
-      <button class="modal-close" data-close="menu"
-              aria-label="Cerrar">×</button>
-      <div class="full-menu-title">
-        <span class="section-kicker">TRES AMIGOS</span>
-        <h2>Menú completo</h2>
-      </div>
-      <img src="menu-tresamigos.jpg"
-           alt="Menú completo de Tres Amigos"
-           class="full-menu-image">
-    </div>
-  </div>
-
-
   <script>
-    "use strict";
-
-    /* CONFIGURACIÓN */
-    const SHEET_CSV_URL =
+    const SHEET_CSV =
       "https://docs.google.com/spreadsheets/d/e/2PACX-1vTPkiv0pOXPkAyspOVpzbPs5tBRakvpL3RDz5Mh67MGc81JY0sjIBcmyPNZ5XElpT11xHiMRODMobE_/pub?gid=0&single=true&output=csv";
 
-    const WHATSAPP_URL = "https://wa.me/520123456789";
-
-    const WELCOME_TEXT =
-      "Bienvenidos a Tres Amigos, este es nuestro Menú Digital, elija sus platillos y bebidas favoritas y en cuánto usted lo solicite uno de nuestros meseros tomará su orden";
-
-    /* PRODUCTOS DE RESPALDO */
     const fallbackProducts = [
-      {name:"LA CLÁSICA",price:85,category:"hamburguesas",description:"Hamburguesa clásica."},
-      {name:"DELICIOUS BBQ",price:97,category:"hamburguesas",description:"Hamburguesa con sabor BBQ."},
-      {name:"POLLO MEXICAN",price:89,category:"hamburguesas",description:"Hamburguesa de pollo."},
-      {name:"PIKOSITAS BBQ",price:120,category:"alitas",description:"Alitas con salsa BBQ."},
-      {name:"DULCES AMIGAS BBQ",price:120,category:"alitas",description:"Alitas con un toque dulce BBQ."},
-      {name:"CRUJI-ALAS",price:120,category:"alitas",description:"Alitas crujientes."},
-      {name:"AMIGO DEL NORTE",price:75,category:"snacks",description:"Snack para compartir."},
-      {name:"AMIGO CHILANGO",price:75,category:"snacks",description:"Snack al estilo chilango."},
-      {name:"REFRESCO EN LATA",price:25,category:"bebidas",description:"Refresco en lata."},
-      {name:"REFRESCO EN BOTELLA",price:25,category:"bebidas",description:"Refresco en botella."},
-      {name:"AGUAS FRESCAS",price:45,category:"bebidas",description:"Agua fresca."},
-      {name:"LIMONADA ESPECIAL",price:45,category:"bebidas",description:"Limonada especial."},
-      {name:"CERVEZAS",price:55,category:"bebidas",description:"Cervezas."}
+      ["1","LA CLÁSICA","Carne de res a la parrilla, queso amarillo, lechuga fresca, jitomate, cebolla y aderezo de la casa en pan con ajonjolí.","Hamburguesas","85","","TRUE","1"],
+      ["2","DELICIOUS BBQ","Carne de res jugosa, queso cheddar, tocino crujiente y salsa BBQ ahumada, servidos en pan suave tostado.","Hamburguesas","97","","TRUE","2"],
+      ["3","POLLO MEXICAN","Pechuga de pollo crujiente, queso manchego, aguacate, lechuga, jitomate y mayonesa con chipotle en pan dorado.","Hamburguesas","89","","TRUE","3"],
+      ["4","PIKOSITAS BBQ","12 piezas de alitas doradas bañadas en salsa BBQ con un toque picante, especias y sabor ahumado intenso.","Alitas","120","","TRUE","4"],
+      ["5","DULCES AMIGAS BBQ","12 piezas de alitas crujientes cubiertas con salsa BBQ dulce, un toque de miel y especias para equilibrar cada bocado.","Alitas","120","","TRUE","5"],
+      ["6","CRUJI-ALAS","12 piezas de alitas con cubierta dorada y extra crujiente, sazonadas con una mezcla de especias y acompañadas de aderezo cremoso.","Alitas","120","","TRUE","6"],
+      ["7","AMIGO DEL NORTE","Salchicha envuelta en tocino, pan suave, cebolla asada, jitomate y una combinación de mostaza, cátsup y mayonesa.","Snacks","75","","TRUE","7"],
+      ["8","AMIGO CHILANGO","Salchicha a la plancha en pan suave con jitomate, cebolla, jalapeños, mayonesa y salsa al gusto.","Snacks","75","","TRUE","8"],
+      ["9","REFRESCO EN LATA","Coca-Cola, Pepsi, Sprite, Fanta y Manzanita Sol. Lata de 235 ml, al tiempo o fría.","Bebidas","25","","TRUE","9"],
+      ["10","REFRESCO EN BOTELLA","Coca-Cola, Pepsi, Sprite, Fanta y Manzanita Sol. Botella de vidrio de 500 ml, al tiempo o fría.","Bebidas","25","","TRUE","10"],
+      ["11","AGUAS FRESCAS","Horchata, jamaica, tamarindo, limón, pepino con limón y melón. Presentación de 1 litro.","Bebidas","45","","TRUE","11"],
+      ["12","LIMONADA ESPECIAL","Limón recién exprimido, agua fría, un toque de azúcar, hielo y hojas de hierbabuena. Presentación de 700 ml.","Bebidas","45","","TRUE","12"],
+      ["13","CERVEZAS","Corona Extra, Modelo Especial, Victoria, Indio y Tecate. Corona Extra, Modelo Especial, Victoria e Indio en botella de 355 ml; Tecate en botella de 300 ml.","Bebidas","55","","TRUE","13"]
     ];
 
-    let products = [...fallbackProducts];
-    let activeCategory = "todos";
+    function parseCSV(text) {
+      const rows = [];
+      let row = [], value = "", quoted = false;
+      for (let i = 0; i < text.length; i++) {
+        const char = text[i];
+        if (char === '"' && text[i + 1] === '"' && quoted) {
+          value += '"'; i++;
+        } else if (char === '"') quoted = !quoted;
+        else if (char === "," && !quoted) {
+          row.push(value.trim()); value = "";
+        } else if ((char === "\n" || char === "\r") && !quoted) {
+          if (char === "\r" && text[i + 1] === "\n") i++;
+          row.push(value.trim());
+          if (row.some(cell => cell !== "")) rows.push(row);
+          row = []; value = "";
+        } else value += char;
+      }
+      row.push(value.trim());
+      if (row.some(cell => cell !== "")) rows.push(row);
+      return rows;
+    }
 
-    const productsGrid = document.getElementById("productsGrid");
-    const loadingMessage = document.getElementById("loadingMessage");
-
-
-    /* UTILIDADES */
     function escapeHTML(value) {
       return String(value ?? "").replace(/[&<>"']/g, char => ({
-        "&":"&amp;",
-        "<":"&lt;",
-        ">":"&gt;",
-        '"':"&quot;",
-        "'":"&#039;"
+        "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"
       })[char]);
     }
 
-    function normalizeCategory(value) {
-      const text = String(value || "").toLowerCase().trim();
+    // TARJETAS Y ENTRADAS ANIMADAS
+    function renderProducts(products) {
+      const grid = document.getElementById("menu-grid");
+      grid.innerHTML = "";
 
-      if (text.includes("hamburg")) return "hamburguesas";
-      if (text.includes("alita")) return "alitas";
-      if (text.includes("snack")) return "snacks";
-      if (text.includes("bebida")) return "bebidas";
+      const visible = products
+        .filter(p => p[1] && String(p[6] ?? "TRUE").toUpperCase() !== "FALSE")
+        .sort((a,b) => Number(a[7] || 999) - Number(b[7] || 999));
 
-      return text || "otros";
-    }
-
-    function money(value) {
-      const number = Number(String(value).replace(/[^0-9.]/g, ""));
-      return Number.isFinite(number)
-        ? number.toLocaleString("es-MX", {
-            style:"currency",
-            currency:"MXN",
-            maximumFractionDigits:2
-          })
-        : value;
-    }
-
-    function getField(row, names) {
-      for (const name of names) {
-        if (row[name] !== undefined && row[name] !== "") return row[name];
-      }
-      return "";
-    }
-
-
-    /* LECTOR CSV */
-    function parseCSV(text) {
-      const rows = [];
-      let row = [];
-      let value = "";
-      let insideQuotes = false;
-
-      for (let i = 0; i < text.length; i++) {
-        const char = text[i];
-        const next = text[i + 1];
-
-        if (char === '"' && insideQuotes && next === '"') {
-          value += '"';
-          i++;
-        } else if (char === '"') {
-          insideQuotes = !insideQuotes;
-        } else if (char === "," && !insideQuotes) {
-          row.push(value.trim());
-          value = "";
-        } else if ((char === "\n" || char === "\r") && !insideQuotes) {
-          if (char === "\r" && next === "\n") i++;
-          row.push(value.trim());
-          if (row.some(cell => cell !== "")) rows.push(row);
-          row = [];
-          value = "";
-        } else {
-          value += char;
-        }
-      }
-
-      row.push(value.trim());
-      if (row.some(cell => cell !== "")) rows.push(row);
-
-      if (rows.length < 2) return [];
-
-      const headers = rows.shift().map(header =>
-        header.replace(/^\uFEFF/, "").toLowerCase().trim()
-      );
-
-      return rows.map(cells => {
-        const item = {};
-        headers.forEach((header, index) => {
-          item[header] = cells[index] || "";
-        });
-        return item;
-      });
-    }
-
-
-    /* CARGA DE GOOGLE SHEETS */
-    async function loadProducts() {
-      try {
-        const response = await fetch(SHEET_CSV_URL, {
-          cache:"no-store"
-        });
-
-        if (!response.ok) throw new Error("No se pudo leer la hoja");
-
-        const csv = await response.text();
-        const rows = parseCSV(csv);
-
-        const loaded = rows.map(row => {
-          const name = getField(row, ["nombre","producto","platillo","name"]);
-          const price = getField(row, ["precio","price"]);
-          const category = getField(row, ["categoria","categoría","category"]);
-          const description = getField(row, ["descripcion","descripción","description"]);
-          const image = getField(row, ["imagen","foto","image","url"]);
-
-          return {
-            name,
-            price,
-            category:normalizeCategory(category),
-            description,
-            image
-          };
-        }).filter(product => product.name);
-
-        if (loaded.length) products = loaded;
-      } catch (error) {
-        console.warn("Se utilizará el menú de respaldo:", error);
-      }
-
-      loadingMessage.hidden = true;
-      renderProducts();
-    }
-
-
-    /* RENDERIZADO DE PRODUCTOS */
-    function renderProducts() {
-      const visibleProducts = activeCategory === "todos"
-        ? products
-        : products.filter(product =>
-            normalizeCategory(product.category) === activeCategory
-          );
-
-      productsGrid.innerHTML = "";
-
-      if (!visibleProducts.length) {
-        productsGrid.innerHTML =
-          '<p class="empty-message">No hay productos en esta categoría.</p>';
-        return;
-      }
-
-      visibleProducts.forEach((product, index) => {
-        const card = document.createElement("article");
-        card.className = "product-card";
-        card.style.animationDelay = `${index * 45}ms`;
-
-        const imageHTML = product.image
-          ? `<img src="${escapeHTML(product.image)}"
-                  alt="${escapeHTML(product.name)}"
-                  loading="lazy"
-                  onerror="this.parentElement.classList.add('no-photo');this.remove()">`
-          : `<div class="product-no-image" aria-label="Imagen no disponible">
-               <span>🍽️</span>
-             </div>`;
+      visible.forEach((product, index) => {
+        const [,name,description,category,price,image] = product;
+        const card = document.createElement("button");
+        card.className = "product-card reveal";
+        card.type = "button";
+        card.setAttribute("aria-label", `Ver ${name}`);
 
         card.innerHTML = `
-          <button class="product-card-button" type="button"
-                  aria-label="Ver ${escapeHTML(product.name)}">
-            <div class="product-photo">
-              ${imageHTML}
-            </div>
-            <div class="product-details">
-              <span class="product-category">
-                ${escapeHTML(product.category)}
-              </span>
-              <h3>${escapeHTML(product.name)}</h3>
-              <p>${escapeHTML(product.description || "")}</p>
-              <div class="product-card-bottom">
-                <strong>${escapeHTML(money(product.price))}</strong>
-                <span class="product-plus">+</span>
-              </div>
-            </div>
-          </button>
-        `;
+          <span class="product-photo">
+            ${image
+              ? `<img src="${escapeHTML(image)}" alt="${escapeHTML(name)}" loading="lazy"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+                 <span class="photo-pending" style="display:none">Fotografía no disponible</span>`
+              : `<span class="photo-pending">Fotografía<br>del platillo</span>`}
+            <span class="photo-shine"></span>
+          </span>
+          <span class="product-details">
+            <span class="product-category">${escapeHTML(category || "TRES AMIGOS")}</span>
+            <strong class="product-name">${escapeHTML(name)}</strong>
+            <span class="product-description">${escapeHTML(description)}</span>
+            <span class="product-price">$${escapeHTML(price)} MXN</span>
+            <span class="card-discover">DESCUBRIR PLATILLO ↗</span>
+          </span>`;
+        card.style.setProperty("--delay", `${(index % 4) * 90}ms`);
+        card.addEventListener("click", () => openProduct(product));
+        grid.appendChild(card);
+      });
 
-        card.querySelector("button").addEventListener("click", () => {
-          openProduct(product);
+      if (!visible.length) grid.innerHTML = '<p class="loading">No hay platillos disponibles.</p>';
+      observeReveals(grid);
+      enableCardTilt(grid);
+    }
+
+    // ANIMACIÓN DE APARICIÓN AL DESPLAZARSE
+    let revealObserver;
+    function observeReveals(root = document) {
+      const elements = root.querySelectorAll(".reveal:not(.visible)");
+      if (!("IntersectionObserver" in window)) {
+        elements.forEach(el => el.classList.add("visible"));
+        return;
+      }
+      if (!revealObserver) {
+        revealObserver = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: "0px 0px -35px 0px" });
+      }
+      elements.forEach(el => revealObserver.observe(el));
+    }
+    observeReveals();
+
+    // EFECTO 3D EN TARJETAS PARA RATÓN / TRACKPAD
+    function enableCardTilt(root) {
+      if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+      root.querySelectorAll(".product-card").forEach(card => {
+        card.addEventListener("pointermove", event => {
+          const rect = card.getBoundingClientRect();
+          const x = (event.clientX - rect.left) / rect.width;
+          const y = (event.clientY - rect.top) / rect.height;
+          card.style.setProperty("--rx", `${(0.5 - y) * 9}deg`);
+          card.style.setProperty("--ry", `${(x - 0.5) * 10}deg`);
+          card.style.setProperty("--mx", `${x * 100}%`);
+          card.style.setProperty("--my", `${y * 100}%`);
         });
-
-        productsGrid.appendChild(card);
+        card.addEventListener("pointerleave", () => {
+          card.style.setProperty("--rx", "0deg");
+          card.style.setProperty("--ry", "0deg");
+        });
       });
     }
 
+    // BIENVENIDA HABLADA EN ESPAÑOL DE MÉXICO
+    const welcomeText =
+      "¡Bienvenidos a Tres Amigos! Este es nuestro menú. Elige tus platillos y bebidas favoritos y, enseguida que lo solicites, uno de nuestros meseros tomará tu orden. ¡Que lo disfrutes!";
 
-    /* FILTROS */
-    document.querySelectorAll(".category-button").forEach(button => {
-      button.addEventListener("click", () => {
-        document.querySelectorAll(".category-button")
-          .forEach(item => item.classList.remove("active"));
+    const audioButton = document.getElementById("play-welcome");
+    const audioLabel = document.getElementById("audio-label");
+    let selectedVoice = null;
 
-        button.classList.add("active");
-        activeCategory = button.dataset.category;
-        renderProducts();
-      });
+    function findMexicanVoice() {
+      if (!("speechSynthesis" in window)) return;
+      const voices = speechSynthesis.getVoices();
+      selectedVoice =
+        voices.find(v => v.lang.toLowerCase() === "es-mx" && /female|sabina|paulina|monica|lucia/i.test(v.name)) ||
+        voices.find(v => v.lang.toLowerCase() === "es-mx") ||
+        voices.find(v => v.lang.toLowerCase().startsWith("es"));
+    }
+
+    if ("speechSynthesis" in window) {
+      findMexicanVoice();
+      speechSynthesis.onvoiceschanged = findMexicanVoice;
+    }
+
+    function speakWelcome() {
+      if (!("speechSynthesis" in window)) {
+        audioLabel.textContent = "Audio no disponible";
+        return;
+      }
+      speechSynthesis.cancel();
+      findMexicanVoice();
+
+      const speech = new SpeechSynthesisUtterance(welcomeText);
+      speech.lang = selectedVoice?.lang || "es-MX";
+      if (selectedVoice) speech.voice = selectedVoice;
+      speech.rate = 0.94;
+      speech.pitch = 1.18;
+      speech.volume = 1;
+
+      audioLabel.textContent = "Reproduciendo bienvenida…";
+      audioButton.classList.add("speaking");
+
+      speech.onend = () => {
+        audioLabel.textContent = "Escuchar bienvenida";
+        audioButton.classList.remove("speaking");
+      };
+      speech.onerror = () => {
+        audioLabel.textContent = "Volver a escuchar";
+        audioButton.classList.remove("speaking");
+      };
+      speechSynthesis.speak(speech);
+    }
+
+    audioButton.addEventListener("click", speakWelcome);
+
+    // ENTRADA AL SITIO
+    const welcomeScreen = document.getElementById("welcome-screen");
+    document.getElementById("enter-site").addEventListener("click", () => {
+      welcomeScreen.classList.add("welcome-exit");
+      setTimeout(() => welcomeScreen.remove(), 850);
+      speakWelcome();
     });
 
-
-    /* MODAL DE PRODUCTO */
-    const productModal = document.getElementById("productModal");
+    // MODAL DE PRODUCTO
+    const productModal = document.getElementById("product-modal");
+    const modalCard = document.getElementById("modal-card");
+    let previousFocus = null;
 
     function openProduct(product) {
-      const imageContainer = document.getElementById("modalProductImage");
+      const [,name,description,,price,image] = product;
+      previousFocus = document.activeElement;
+      document.getElementById("modal-name").textContent = name;
+      document.getElementById("modal-description").textContent = description;
+      document.getElementById("modal-price").textContent = `$${price} MXN`;
 
-      imageContainer.innerHTML = product.image
-        ? `<img src="${escapeHTML(product.image)}"
-                alt="${escapeHTML(product.name)}"
-                onerror="this.remove()">`
-        : `<div class="modal-no-image">🍽️</div>`;
+      const img = document.getElementById("modal-image");
+      const placeholder = document.getElementById("modal-image-placeholder");
+      img.onerror = () => { img.style.display = "none"; placeholder.style.display = "grid"; };
 
-      document.getElementById("modalProductName").textContent = product.name;
-      document.getElementById("modalProductCategory").textContent =
-        product.category;
-      document.getElementById("modalProductDescription").textContent =
-        product.description || "";
-      document.getElementById("modalProductPrice").textContent =
-        money(product.price);
+      if (image) {
+        img.src = image; img.alt = name;
+        img.style.display = "block"; placeholder.style.display = "none";
+      } else {
+        img.removeAttribute("src");
+        img.style.display = "none"; placeholder.style.display = "grid";
+      }
 
+      productModal.classList.remove("is-closing");
       productModal.classList.add("is-open");
       productModal.setAttribute("aria-hidden", "false");
-      document.body.classList.add("modal-open");
+      document.body.classList.add("no-scroll");
+      modalCard.classList.remove("turn-in");
+      void modalCard.offsetWidth;
+      modalCard.classList.add("turn-in");
+      document.getElementById("close-product").focus();
     }
 
     function closeProduct() {
-      productModal.classList.remove("is-open");
-      productModal.setAttribute("aria-hidden", "true");
-      document.body.classList.remove("modal-open");
+      if (!productModal.classList.contains("is-open")) return;
+      productModal.classList.add("is-closing");
+      setTimeout(() => {
+        productModal.classList.remove("is-open", "is-closing");
+        productModal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("no-scroll");
+        previousFocus?.focus();
+      }, 450);
     }
 
+    document.getElementById("close-product").addEventListener("click", closeProduct);
+    productModal.addEventListener("click", e => {
+      if (e.target === productModal) closeProduct();
+    });
 
-    /* MODAL DEL MENÚ COMPLETO */
-    const fullMenuModal = document.getElementById("fullMenuModal");
-
-    document.getElementById("openFullMenu").addEventListener("click", () => {
+    // MODAL DEL MENÚ COMPLETO
+    const fullMenuModal = document.getElementById("full-menu-modal");
+    document.getElementById("open-full-menu").addEventListener("click", () => {
+      previousFocus = document.activeElement;
       fullMenuModal.classList.add("is-open");
       fullMenuModal.setAttribute("aria-hidden", "false");
-      document.body.classList.add("modal-open");
+      document.body.classList.add("no-scroll");
+      document.getElementById("close-full-menu").focus();
     });
 
     function closeFullMenu() {
       fullMenuModal.classList.remove("is-open");
       fullMenuModal.setAttribute("aria-hidden", "true");
-      document.body.classList.remove("modal-open");
+      document.body.classList.remove("no-scroll");
+      previousFocus?.focus();
     }
 
-    document.querySelectorAll("[data-close='product']").forEach(element => {
-      element.addEventListener("click", closeProduct);
+    document.getElementById("close-full-menu").addEventListener("click", closeFullMenu);
+    fullMenuModal.addEventListener("click", e => {
+      if (e.target === fullMenuModal) closeFullMenu();
     });
 
-    document.querySelectorAll("[data-close='menu']").forEach(element => {
-      element.addEventListener("click", closeFullMenu);
-    });
-
-    document.addEventListener("keydown", event => {
-      if (event.key === "Escape") {
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape") {
         closeProduct();
         closeFullMenu();
       }
     });
 
-
-    /* BIENVENIDA CON VOZ */
-    const welcomeScreen = document.getElementById("welcomeScreen");
-    const mainContent = document.getElementById("mainContent");
-    const enterButton = document.getElementById("enterButton");
-
-    function speakWelcome() {
-      if (!("speechSynthesis" in window)) return;
-
-      window.speechSynthesis.cancel();
-
-      const utterance = new SpeechSynthesisUtterance(WELCOME_TEXT);
-      utterance.lang = "es-MX";
-      utterance.rate = 0.92;
-      utterance.pitch = 1;
-      utterance.volume = 1;
-
-      const voices = window.speechSynthesis.getVoices();
-      const mexicanVoice = voices.find(voice =>
-        voice.lang.toLowerCase() === "es-mx"
-      );
-      const spanishVoice = voices.find(voice =>
-        voice.lang.toLowerCase().startsWith("es")
-      );
-
-      if (mexicanVoice || spanishVoice) {
-        utterance.voice = mexicanVoice || spanishVoice;
+    async function loadMenu() {
+      try {
+        const response = await fetch(SHEET_CSV, { cache: "no-store" });
+        if (!response.ok) throw new Error("No se pudo leer Google Sheets");
+        const rows = parseCSV(await response.text());
+        const validRows = rows.slice(1).filter(row =>
+          row[1] && row[4] && !isNaN(Number(row[4]))
+        );
+        if (validRows.length !== 13) throw new Error("No están los 13 productos completos");
+        renderProducts(validRows);
+      } catch (error) {
+        console.warn("Se mostrarán los productos de respaldo:", error);
+        renderProducts(fallbackProducts);
       }
-
-      window.speechSynthesis.speak(utterance);
     }
-
-    enterButton.addEventListener("click", () => {
-      speakWelcome();
-
-      welcomeScreen.classList.add("welcome-hidden");
-      mainContent.classList.add("content-visible");
-
-      setTimeout(() => {
-        welcomeScreen.hidden = true;
-      }, 850);
-    });
-
-
-    /* INICIO */
-    document.getElementById("currentYear").textContent =
-      new Date().getFullYear();
-
-    loadProducts();
+    loadMenu();
   </script>
-
 </body>
 </html>
