@@ -405,12 +405,51 @@
       });
     }
 
-    // VOZ DE BIENVENIDA APROBADA
+    // VOZ DE BIENVENIDA: ESPAÑOL DE MÉXICO, CÁLIDA Y EXPRESIVA
     const WELCOME_TEXT =
-      "Bienvenidos a Tres Amigos, este es nuestro Menú Digital, elija sus platillos y bebidas favoritas y en cuánto usted lo solicite uno de nuestros meseros tomará su orden";
+      "¡Hola! ¡Bienvenidos a Tres Amigos! " +
+      "Este es nuestro menú digital. " +
+      "Elijan sus platillos y bebidas favoritas y, en cuanto ustedes lo soliciten, " +
+      "uno de nuestros meseros con mucho gusto tomará su orden. " +
+      "¡Esperamos que disfruten su visita!";
 
     const audioButton = document.getElementById("play-welcome");
     const audioLabel = document.getElementById("audio-label");
+
+    let selectedMexicanVoice = null;
+
+    function findMexicanVoice() {
+      if (!("speechSynthesis" in window)) return;
+
+      const voices = window.speechSynthesis.getVoices();
+
+      const mexicanVoices = voices.filter(voice =>
+        voice.lang && voice.lang.toLowerCase() === "es-mx"
+      );
+
+      // Preferir voces mexicanas con nombres reconocibles.
+      const expressiveVoice = mexicanVoices.find(voice =>
+        /dalia|monica|paulina|lucia|sabina|jorge|juan|miguel/i.test(voice.name)
+      );
+
+      selectedMexicanVoice =
+        expressiveVoice ||
+        mexicanVoices.find(voice => voice.default) ||
+        mexicanVoices[0] ||
+        voices.find(voice =>
+          voice.lang && voice.lang.toLowerCase().startsWith("es")
+        ) ||
+        null;
+    }
+
+    if ("speechSynthesis" in window) {
+      findMexicanVoice();
+
+      window.speechSynthesis.addEventListener(
+        "voiceschanged",
+        findMexicanVoice
+      );
+    }
 
     function speakWelcome() {
       if (!("speechSynthesis" in window)) {
@@ -421,26 +460,20 @@
       window.speechSynthesis.cancel();
 
       const utterance = new SpeechSynthesisUtterance(WELCOME_TEXT);
+
       utterance.lang = "es-MX";
-      utterance.rate = 0.92;
-      utterance.pitch = 1;
+
+      // Ajustes de interpretación:
+      // ritmo conversacional, tono animado y volumen completo.
+      utterance.rate = 0.98;
+      utterance.pitch = 1.16;
       utterance.volume = 1;
 
-      const voices = window.speechSynthesis.getVoices();
-
-      const mexicanVoice = voices.find(voice =>
-        voice.lang.toLowerCase() === "es-mx"
-      );
-
-      const spanishVoice = voices.find(voice =>
-        voice.lang.toLowerCase().startsWith("es")
-      );
-
-      if (mexicanVoice || spanishVoice) {
-        utterance.voice = mexicanVoice || spanishVoice;
+      if (selectedMexicanVoice) {
+        utterance.voice = selectedMexicanVoice;
       }
 
-      audioLabel.textContent = "Reproduciendo bienvenida…";
+      audioLabel.textContent = "¡Estamos hablando contigo!";
       audioButton.classList.add("speaking");
 
       utterance.onend = () => {
