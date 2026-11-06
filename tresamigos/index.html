@@ -6,6 +6,7 @@
   <meta name="theme-color" content="#ed1c35">
   <meta name="description" content="Menú digital de Tres Amigos. Hamburguesas, alitas, snacks y bebidas.">
   <title>Tres Amigos | Menú digital</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -18,14 +19,57 @@
   <div class="ambient ambient-three"></div>
   <div class="noise"></div>
 
+  <!-- PANTALLA DE BIENVENIDA -->
   <div class="welcome-screen" id="welcome-screen">
     <div class="welcome-orbit"></div>
+
     <div class="welcome-content">
-      <div class="welcome-mark">TA</div>
+      <div class="welcome-logo-animation">
+        <div class="welcome-logo-aura"></div>
+
+        <svg class="welcome-logo-art" viewBox="0 0 360 210"
+             xmlns="http://www.w3.org/2000/svg"
+             role="img" aria-label="Tres personajes de Tres Amigos">
+          <g stroke="#542719" stroke-width="5" stroke-linejoin="round">
+            <path d="M145 48 Q145 13 180 13 Q215 13 215 48Z" fill="#F8B323"/>
+            <path d="M143 52H217"/>
+          </g>
+
+          <g>
+            <circle cx="83" cy="91" r="23" fill="#F4C6A0"/>
+            <path d="M60 88Q61 55 85 59Q107 59 106 87Q93 75 75 79Z" fill="#542719"/>
+            <path d="M40 178Q38 125 83 125Q128 125 127 178Z" fill="#E51D35"/>
+          </g>
+
+          <g>
+            <circle cx="180" cy="91" r="25" fill="#F4C6A0"/>
+            <path d="M154 87Q153 51 181 54Q207 54 206 87Q189 72 164 80Z" fill="#542719"/>
+            <path d="M153 58Q180 34 207 58L205 68Q180 58 155 68Z" fill="#E51D35"/>
+            <path d="M137 178Q137 122 180 122Q223 122 223 178Z" fill="#F8B323"/>
+          </g>
+
+          <g>
+            <circle cx="277" cy="91" r="23" fill="#F4C6A0"/>
+            <path d="M254 88Q255 55 278 59Q301 59 300 87Q284 76 267 80Z" fill="#542719"/>
+            <path d="M233 178Q232 125 277 125Q322 125 320 178Z" fill="#E51D35"/>
+          </g>
+
+          <g stroke="#542719" stroke-width="4" stroke-linejoin="round">
+            <path d="M137 143Q137 117 180 117Q223 117 223 143Z" fill="#F8B323"/>
+            <path d="M139 147H221" stroke="#5B9D45"/>
+            <path d="M139 153H221" stroke="#E51D35"/>
+            <path d="M137 158Q180 168 223 158L220 170Q180 181 140 170Z" fill="#F8B323"/>
+          </g>
+        </svg>
+      </div>
+
+      <h1 class="welcome-business-name">Tres Amigos</h1>
       <p>UNA EXPERIENCIA PARA DISFRUTAR</p>
-      <h1>TRES AMIGOS</h1>
       <span>El sabor de buenos momentos</span>
-      <button id="enter-site" type="button">ENTRAR AL MENÚ <span>↗</span></button>
+
+      <button id="enter-site" type="button">
+        ENTRAR AL MENÚ <span>↗</span>
+      </button>
     </div>
   </div>
 
@@ -36,6 +80,7 @@
 
       <div class="logo-animation reveal">
         <div class="logo-aura"></div>
+
         <svg class="logo-art" viewBox="0 0 360 210"
              xmlns="http://www.w3.org/2000/svg"
              role="img" aria-label="Tres amigos y una hamburguesa">
@@ -43,22 +88,26 @@
             <path d="M145 48 Q145 13 180 13 Q215 13 215 48Z" fill="#F8B323"/>
             <path d="M143 52H217"/>
           </g>
+
           <g>
             <circle cx="83" cy="91" r="23" fill="#F4C6A0"/>
             <path d="M60 88Q61 55 85 59Q107 59 106 87Q93 75 75 79Z" fill="#542719"/>
             <path d="M40 178Q38 125 83 125Q128 125 127 178Z" fill="#E51D35"/>
           </g>
+
           <g>
             <circle cx="180" cy="91" r="25" fill="#F4C6A0"/>
             <path d="M154 87Q153 51 181 54Q207 54 206 87Q189 72 164 80Z" fill="#542719"/>
             <path d="M153 58Q180 34 207 58L205 68Q180 58 155 68Z" fill="#E51D35"/>
             <path d="M137 178Q137 122 180 122Q223 122 223 178Z" fill="#F8B323"/>
           </g>
+
           <g>
             <circle cx="277" cy="91" r="23" fill="#F4C6A0"/>
             <path d="M254 88Q255 55 278 59Q301 59 300 87Q284 76 267 80Z" fill="#542719"/>
             <path d="M233 178Q232 125 277 125Q322 125 320 178Z" fill="#E51D35"/>
           </g>
+
           <g stroke="#542719" stroke-width="4" stroke-linejoin="round">
             <path d="M137 143Q137 117 180 117Q223 117 223 143Z" fill="#F8B323"/>
             <path d="M139 147H221" stroke="#5B9D45"/>
@@ -72,9 +121,11 @@
       <h1 class="brand-name reveal">Tres Amigos</h1>
       <div class="brand-divider"></div>
       <h2 class="menu-heading reveal">MENÚ DIGITAL</h2>
+
       <p class="intro reveal">
-        Elige tus platillos y bebidas favoritos. Enseguida que lo solicites,
-        uno de nuestros meseros tomará tu orden.
+        Bienvenidos a Tres Amigos, este es nuestro Menú Digital, elija sus
+        platillos y bebidas favoritas y en cuánto usted lo solicite uno de
+        nuestros meseros tomará su orden.
       </p>
 
       <div class="hero-actions reveal">
@@ -83,8 +134,12 @@
           <span id="audio-label">Escuchar bienvenida</span>
           <span class="audio-pulse"></span>
         </button>
-        <a href="#menu" class="explore-button">EXPLORAR MENÚ <span>↓</span></a>
+
+        <a href="#menu" class="explore-button">
+          EXPLORAR MENÚ <span>↓</span>
+        </a>
       </div>
+
       <div class="scroll-indicator"><span></span></div>
     </header>
 
@@ -106,21 +161,29 @@
       <span class="eyebrow">TODO EN UN SOLO LUGAR</span>
       <h2>¿Quieres verlo todo?</h2>
       <p>Consulta nuestro menú completo y encuentra algo delicioso.</p>
+
       <button class="complete-button" id="open-full-menu" type="button">
         VER MENÚ COMPLETO <span>↗</span>
       </button>
     </section>
   </main>
 
+  <!-- MODAL DE PRODUCTO -->
   <div class="modal" id="product-modal"
        aria-hidden="true" role="dialog" aria-modal="true"
        aria-labelledby="modal-name">
-    <button class="modal-close" id="close-product" type="button" aria-label="Cerrar">×</button>
+
+    <button class="modal-close" id="close-product"
+            type="button" aria-label="Cerrar">×</button>
+
     <article class="modal-card" id="modal-card">
       <div class="modal-image-wrap">
         <img id="modal-image" src="" alt="">
-        <div id="modal-image-placeholder" class="modal-placeholder">Fotografía del platillo</div>
+        <div id="modal-image-placeholder" class="modal-placeholder">
+          Fotografía del platillo
+        </div>
       </div>
+
       <div class="modal-info">
         <span class="modal-label">TRES AMIGOS · HECHO CON SABOR</span>
         <h2 id="modal-name"></h2>
@@ -130,33 +193,47 @@
     </article>
   </div>
 
+  <!-- MODAL DEL MENÚ COMPLETO -->
   <div class="full-menu-modal" id="full-menu-modal"
        aria-hidden="true" role="dialog" aria-modal="true"
        aria-label="Menú completo">
-    <button class="modal-close" id="close-full-menu" type="button" aria-label="Cerrar">×</button>
-    <img src="menu-tresamigos.jpg" alt="Menú completo de Tres Amigos"
+
+    <button class="modal-close" id="close-full-menu"
+            type="button" aria-label="Cerrar">×</button>
+
+    <img src="menu-tresamigos.jpg"
+         alt="Menú completo de Tres Amigos"
          class="full-menu-image"
          onerror="this.style.display='none'; document.getElementById('menu-image-error').style.display='block';">
+
     <p id="menu-image-error" class="menu-image-error">
       No se encontró la imagen del menú. Revisa el nombre del archivo.
     </p>
   </div>
 
+  <!-- PIE DE PÁGINA -->
   <footer class="footer">
     <div class="footer-orb"></div>
     <span class="eyebrow">GRACIAS POR ELEGIRNOS</span>
     <h2>Los buenos momentos<br>se comparten entre amigos.</h2>
     <p>Nos encantaría conocer tus comentarios y experiencia.</p>
-    <a class="footer-whatsapp" href="https://wa.me/520123456789"
+
+    <a class="footer-whatsapp"
+       href="https://wa.me/520123456789"
        target="_blank" rel="noopener">
       <span>✆</span> Envíanos tus comentarios
     </a>
+
     <div class="footer-line"></div>
     <small>© Tres Amigos 2026 · Todos los derechos reservados</small>
   </footer>
 
-  <a class="whatsapp-float" href="https://wa.me/520123456789"
-     target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <!-- WHATSAPP FLOTANTE -->
+  <a class="whatsapp-float"
+     href="https://wa.me/520123456789"
+     target="_blank" rel="noopener"
+     aria-label="Contactar por WhatsApp">
+
     <svg viewBox="0 0 32 32" aria-hidden="true">
       <path fill="currentColor" d="M16 .8A15.1 15.1 0 0 0 3.1 23.7L1 31l7.5-2A15.2 15.2 0 1 0 16 .8Zm0 27.5a12.3 12.3 0 0 1-6.3-1.7l-.5-.3-4.4 1.2L6 23.2l-.3-.5A12.4 12.4 0 1 1 16 28.3Zm6.8-9.3c-.4-.2-2.2-1.1-2.5-1.2-.3-.1-.6-.2-.8.2-.2.4-1 1.2-1.2 1.5-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.5-.3.4-1.2 1.2-1.2 3s1.3 3.5 1.5 3.7c.2.2 2.5 3.8 6.1 5.3.9.4 1.6.6 2.1.7.9.3 1.7.2 2.3.1.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.1-.3-.2-.7-.4Z"/>
     </svg>
@@ -185,42 +262,59 @@
     function parseCSV(text) {
       const rows = [];
       let row = [], value = "", quoted = false;
+
       for (let i = 0; i < text.length; i++) {
         const char = text[i];
+
         if (char === '"' && text[i + 1] === '"' && quoted) {
-          value += '"'; i++;
-        } else if (char === '"') quoted = !quoted;
-        else if (char === "," && !quoted) {
-          row.push(value.trim()); value = "";
+          value += '"';
+          i++;
+        } else if (char === '"') {
+          quoted = !quoted;
+        } else if (char === "," && !quoted) {
+          row.push(value.trim());
+          value = "";
         } else if ((char === "\n" || char === "\r") && !quoted) {
           if (char === "\r" && text[i + 1] === "\n") i++;
           row.push(value.trim());
+
           if (row.some(cell => cell !== "")) rows.push(row);
-          row = []; value = "";
-        } else value += char;
+
+          row = [];
+          value = "";
+        } else {
+          value += char;
+        }
       }
+
       row.push(value.trim());
       if (row.some(cell => cell !== "")) rows.push(row);
+
       return rows;
     }
 
     function escapeHTML(value) {
       return String(value ?? "").replace(/[&<>"']/g, char => ({
-        "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;"
       })[char]);
     }
 
-    // TARJETAS Y ENTRADAS ANIMADAS
+    // TARJETAS DE PRODUCTOS
     function renderProducts(products) {
       const grid = document.getElementById("menu-grid");
       grid.innerHTML = "";
 
       const visible = products
         .filter(p => p[1] && String(p[6] ?? "TRUE").toUpperCase() !== "FALSE")
-        .sort((a,b) => Number(a[7] || 999) - Number(b[7] || 999));
+        .sort((a, b) => Number(a[7] || 999) - Number(b[7] || 999));
 
       visible.forEach((product, index) => {
-        const [,name,description,category,price,image] = product;
+        const [, name, description, category, price, image] = product;
+
         const card = document.createElement("button");
         card.className = "product-card reveal";
         card.type = "button";
@@ -235,31 +329,40 @@
               : `<span class="photo-pending">Fotografía<br>del platillo</span>`}
             <span class="photo-shine"></span>
           </span>
+
           <span class="product-details">
             <span class="product-category">${escapeHTML(category || "TRES AMIGOS")}</span>
             <strong class="product-name">${escapeHTML(name)}</strong>
             <span class="product-description">${escapeHTML(description)}</span>
             <span class="product-price">$${escapeHTML(price)} MXN</span>
             <span class="card-discover">DESCUBRIR PLATILLO ↗</span>
-          </span>`;
+          </span>
+        `;
+
         card.style.setProperty("--delay", `${(index % 4) * 90}ms`);
         card.addEventListener("click", () => openProduct(product));
         grid.appendChild(card);
       });
 
-      if (!visible.length) grid.innerHTML = '<p class="loading">No hay platillos disponibles.</p>';
+      if (!visible.length) {
+        grid.innerHTML = '<p class="loading">No hay platillos disponibles.</p>';
+      }
+
       observeReveals(grid);
       enableCardTilt(grid);
     }
 
-    // ANIMACIÓN DE APARICIÓN AL DESPLAZARSE
+    // ANIMACIONES DE APARICIÓN
     let revealObserver;
+
     function observeReveals(root = document) {
       const elements = root.querySelectorAll(".reveal:not(.visible)");
+
       if (!("IntersectionObserver" in window)) {
         elements.forEach(el => el.classList.add("visible"));
         return;
       }
+
       if (!revealObserver) {
         revealObserver = new IntersectionObserver(entries => {
           entries.forEach(entry => {
@@ -268,25 +371,33 @@
               revealObserver.unobserve(entry.target);
             }
           });
-        }, { threshold: 0.12, rootMargin: "0px 0px -35px 0px" });
+        }, {
+          threshold: 0.12,
+          rootMargin: "0px 0px -35px 0px"
+        });
       }
+
       elements.forEach(el => revealObserver.observe(el));
     }
+
     observeReveals();
 
-    // EFECTO 3D EN TARJETAS PARA RATÓN / TRACKPAD
+    // EFECTO 3D EN TARJETAS
     function enableCardTilt(root) {
       if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+
       root.querySelectorAll(".product-card").forEach(card => {
         card.addEventListener("pointermove", event => {
           const rect = card.getBoundingClientRect();
           const x = (event.clientX - rect.left) / rect.width;
           const y = (event.clientY - rect.top) / rect.height;
+
           card.style.setProperty("--rx", `${(0.5 - y) * 9}deg`);
           card.style.setProperty("--ry", `${(x - 0.5) * 10}deg`);
           card.style.setProperty("--mx", `${x * 100}%`);
           card.style.setProperty("--my", `${y * 100}%`);
         });
+
         card.addEventListener("pointerleave", () => {
           card.style.setProperty("--rx", "0deg");
           card.style.setProperty("--ry", "0deg");
@@ -294,61 +405,62 @@
       });
     }
 
-    // BIENVENIDA HABLADA EN ESPAÑOL DE MÉXICO
-    const welcomeText =
-      "¡Bienvenidos a Tres Amigos! Este es nuestro menú. Elige tus platillos y bebidas favoritos y, enseguida que lo solicites, uno de nuestros meseros tomará tu orden. ¡Que lo disfrutes!";
+    // VOZ DE BIENVENIDA APROBADA
+    const WELCOME_TEXT =
+      "Bienvenidos a Tres Amigos, este es nuestro Menú Digital, elija sus platillos y bebidas favoritas y en cuánto usted lo solicite uno de nuestros meseros tomará su orden";
 
     const audioButton = document.getElementById("play-welcome");
     const audioLabel = document.getElementById("audio-label");
-    let selectedVoice = null;
-
-    function findMexicanVoice() {
-      if (!("speechSynthesis" in window)) return;
-      const voices = speechSynthesis.getVoices();
-      selectedVoice =
-        voices.find(v => v.lang.toLowerCase() === "es-mx" && /female|sabina|paulina|monica|lucia/i.test(v.name)) ||
-        voices.find(v => v.lang.toLowerCase() === "es-mx") ||
-        voices.find(v => v.lang.toLowerCase().startsWith("es"));
-    }
-
-    if ("speechSynthesis" in window) {
-      findMexicanVoice();
-      speechSynthesis.onvoiceschanged = findMexicanVoice;
-    }
 
     function speakWelcome() {
       if (!("speechSynthesis" in window)) {
         audioLabel.textContent = "Audio no disponible";
         return;
       }
-      speechSynthesis.cancel();
-      findMexicanVoice();
 
-      const speech = new SpeechSynthesisUtterance(welcomeText);
-      speech.lang = selectedVoice?.lang || "es-MX";
-      if (selectedVoice) speech.voice = selectedVoice;
-      speech.rate = 0.94;
-      speech.pitch = 1.18;
-      speech.volume = 1;
+      window.speechSynthesis.cancel();
+
+      const utterance = new SpeechSynthesisUtterance(WELCOME_TEXT);
+      utterance.lang = "es-MX";
+      utterance.rate = 0.92;
+      utterance.pitch = 1;
+      utterance.volume = 1;
+
+      const voices = window.speechSynthesis.getVoices();
+
+      const mexicanVoice = voices.find(voice =>
+        voice.lang.toLowerCase() === "es-mx"
+      );
+
+      const spanishVoice = voices.find(voice =>
+        voice.lang.toLowerCase().startsWith("es")
+      );
+
+      if (mexicanVoice || spanishVoice) {
+        utterance.voice = mexicanVoice || spanishVoice;
+      }
 
       audioLabel.textContent = "Reproduciendo bienvenida…";
       audioButton.classList.add("speaking");
 
-      speech.onend = () => {
+      utterance.onend = () => {
         audioLabel.textContent = "Escuchar bienvenida";
         audioButton.classList.remove("speaking");
       };
-      speech.onerror = () => {
+
+      utterance.onerror = () => {
         audioLabel.textContent = "Volver a escuchar";
         audioButton.classList.remove("speaking");
       };
-      speechSynthesis.speak(speech);
+
+      window.speechSynthesis.speak(utterance);
     }
 
     audioButton.addEventListener("click", speakWelcome);
 
     // ENTRADA AL SITIO
     const welcomeScreen = document.getElementById("welcome-screen");
+
     document.getElementById("enter-site").addEventListener("click", () => {
       welcomeScreen.classList.add("welcome-exit");
       setTimeout(() => welcomeScreen.remove(), 850);
@@ -361,37 +473,50 @@
     let previousFocus = null;
 
     function openProduct(product) {
-      const [,name,description,,price,image] = product;
+      const [, name, description, , price, image] = product;
+
       previousFocus = document.activeElement;
+
       document.getElementById("modal-name").textContent = name;
       document.getElementById("modal-description").textContent = description;
       document.getElementById("modal-price").textContent = `$${price} MXN`;
 
       const img = document.getElementById("modal-image");
       const placeholder = document.getElementById("modal-image-placeholder");
-      img.onerror = () => { img.style.display = "none"; placeholder.style.display = "grid"; };
+
+      img.onerror = () => {
+        img.style.display = "none";
+        placeholder.style.display = "grid";
+      };
 
       if (image) {
-        img.src = image; img.alt = name;
-        img.style.display = "block"; placeholder.style.display = "none";
+        img.src = image;
+        img.alt = name;
+        img.style.display = "block";
+        placeholder.style.display = "none";
       } else {
         img.removeAttribute("src");
-        img.style.display = "none"; placeholder.style.display = "grid";
+        img.style.display = "none";
+        placeholder.style.display = "grid";
       }
 
       productModal.classList.remove("is-closing");
       productModal.classList.add("is-open");
       productModal.setAttribute("aria-hidden", "false");
       document.body.classList.add("no-scroll");
+
       modalCard.classList.remove("turn-in");
       void modalCard.offsetWidth;
       modalCard.classList.add("turn-in");
+
       document.getElementById("close-product").focus();
     }
 
     function closeProduct() {
       if (!productModal.classList.contains("is-open")) return;
+
       productModal.classList.add("is-closing");
+
       setTimeout(() => {
         productModal.classList.remove("is-open", "is-closing");
         productModal.setAttribute("aria-hidden", "true");
@@ -400,18 +525,23 @@
       }, 450);
     }
 
-    document.getElementById("close-product").addEventListener("click", closeProduct);
-    productModal.addEventListener("click", e => {
-      if (e.target === productModal) closeProduct();
+    document.getElementById("close-product")
+      .addEventListener("click", closeProduct);
+
+    productModal.addEventListener("click", event => {
+      if (event.target === productModal) closeProduct();
     });
 
     // MODAL DEL MENÚ COMPLETO
     const fullMenuModal = document.getElementById("full-menu-modal");
+
     document.getElementById("open-full-menu").addEventListener("click", () => {
       previousFocus = document.activeElement;
+
       fullMenuModal.classList.add("is-open");
       fullMenuModal.setAttribute("aria-hidden", "false");
       document.body.classList.add("no-scroll");
+
       document.getElementById("close-full-menu").focus();
     });
 
@@ -422,33 +552,47 @@
       previousFocus?.focus();
     }
 
-    document.getElementById("close-full-menu").addEventListener("click", closeFullMenu);
-    fullMenuModal.addEventListener("click", e => {
-      if (e.target === fullMenuModal) closeFullMenu();
+    document.getElementById("close-full-menu")
+      .addEventListener("click", closeFullMenu);
+
+    fullMenuModal.addEventListener("click", event => {
+      if (event.target === fullMenuModal) closeFullMenu();
     });
 
-    document.addEventListener("keydown", e => {
-      if (e.key === "Escape") {
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") {
         closeProduct();
         closeFullMenu();
       }
     });
 
+    // CARGA DE GOOGLE SHEETS Y PRODUCTOS DE RESPALDO
     async function loadMenu() {
       try {
         const response = await fetch(SHEET_CSV, { cache: "no-store" });
-        if (!response.ok) throw new Error("No se pudo leer Google Sheets");
+
+        if (!response.ok) {
+          throw new Error("No se pudo leer Google Sheets");
+        }
+
         const rows = parseCSV(await response.text());
+
         const validRows = rows.slice(1).filter(row =>
           row[1] && row[4] && !isNaN(Number(row[4]))
         );
-        if (validRows.length !== 13) throw new Error("No están los 13 productos completos");
+
+        if (validRows.length !== 13) {
+          throw new Error("No están los 13 productos completos");
+        }
+
         renderProducts(validRows);
+
       } catch (error) {
         console.warn("Se mostrarán los productos de respaldo:", error);
         renderProducts(fallbackProducts);
       }
     }
+
     loadMenu();
   </script>
 </body>
