@@ -10,42 +10,34 @@
 </head>
 
 <body>
-
   <main>
-    <!-- ENCABEZADO -->
     <header class="hero">
-      <p class="welcome">¡Bienvenidos!</p>
+      <p class="welcome reveal">¡Bienvenidos!</p>
 
-      <!-- LOGO ANIMADO -->
-      <div class="logo-animation">
+      <div class="logo-animation reveal">
         <svg class="logo-art" viewBox="0 0 360 210"
              xmlns="http://www.w3.org/2000/svg"
              role="img" aria-label="Tres amigos y una hamburguesa">
-
           <g stroke="#542719" stroke-width="5" stroke-linejoin="round">
             <path d="M145 48 Q145 13 180 13 Q215 13 215 48Z" fill="#F8B323"/>
             <path d="M143 52H217"/>
           </g>
-
           <g>
             <circle cx="83" cy="91" r="23" fill="#F4C6A0"/>
             <path d="M60 88Q61 55 85 59Q107 59 106 87Q93 75 75 79Z" fill="#542719"/>
             <path d="M40 178Q38 125 83 125Q128 125 127 178Z" fill="#E51D35"/>
           </g>
-
           <g>
             <circle cx="180" cy="91" r="25" fill="#F4C6A0"/>
             <path d="M154 87Q153 51 181 54Q207 54 206 87Q189 72 164 80Z" fill="#542719"/>
             <path d="M153 58Q180 34 207 58L205 68Q180 58 155 68Z" fill="#E51D35"/>
             <path d="M137 178Q137 122 180 122Q223 122 223 178Z" fill="#F8B323"/>
           </g>
-
           <g>
             <circle cx="277" cy="91" r="23" fill="#F4C6A0"/>
             <path d="M254 88Q255 55 278 59Q301 59 300 87Q284 76 267 80Z" fill="#542719"/>
             <path d="M233 178Q232 125 277 125Q322 125 320 178Z" fill="#E51D35"/>
           </g>
-
           <g stroke="#542719" stroke-width="4" stroke-linejoin="round">
             <path d="M137 143Q137 117 180 117Q223 117 223 143Z" fill="#F8B323"/>
             <path d="M139 147H221" stroke="#5B9D45"/>
@@ -55,18 +47,17 @@
         </svg>
       </div>
 
-      <h1 class="brand-name">Tres Amigos</h1>
-      <div class="brand-divider"></div>
-      <h2 class="menu-heading">Menú</h2>
+      <h1 class="brand-name reveal">Tres Amigos</h1>
+      <div class="brand-divider reveal"></div>
+      <h2 class="menu-heading reveal">Menú</h2>
 
-      <p class="intro">
+      <p class="intro reveal">
         Enseguida usted lo solicite, uno de nuestros meseros tomará su orden.
       </p>
     </header>
 
-    <!-- PLATILLOS INDIVIDUALES -->
     <section class="menu-section">
-      <div class="section-heading">
+      <div class="section-heading reveal">
         <span class="eyebrow"></span>
         <h2>Nuestros platillos</h2>
         <p>Elige tu favorito y descubre sus sabores.</p>
@@ -77,20 +68,19 @@
       </div>
     </section>
 
-    <!-- MENÚ COMPLETO -->
-    <section class="complete-menu">
+    <section class="complete-menu reveal">
       <h2>Menú completo</h2>
       <p>Consulta todos nuestros platillos en una sola imagen.</p>
-
       <button class="complete-button" id="open-full-menu" type="button">
         Ver menú completo <span>→</span>
       </button>
     </section>
   </main>
 
-  <!-- VENTANA AMPLIADA DEL PLATILLO -->
+  <!-- MODAL DEL PLATILLO -->
   <div class="modal" id="product-modal"
-       aria-hidden="true" role="dialog" aria-modal="true">
+       aria-hidden="true" role="dialog" aria-modal="true"
+       aria-labelledby="modal-name">
 
     <button class="modal-close" id="close-product"
             type="button" aria-label="Cerrar">×</button>
@@ -112,9 +102,10 @@
     </article>
   </div>
 
-  <!-- VISOR DEL MENÚ COMPLETO -->
+  <!-- MODAL DEL MENÚ COMPLETO -->
   <div class="full-menu-modal" id="full-menu-modal"
-       aria-hidden="true" role="dialog" aria-modal="true">
+       aria-hidden="true" role="dialog" aria-modal="true"
+       aria-label="Menú completo">
 
     <button class="modal-close" id="close-full-menu"
             type="button" aria-label="Cerrar">×</button>
@@ -131,10 +122,11 @@
 
   <!-- PIE DE PÁGINA -->
   <footer class="footer">
-    <h2>Gracias por visitarnos amigos</h2>
-    <p>Nos encantaría saber sus comentarios y experiencia.</p>
+    <h2 class="reveal">Gracias por visitarnos amigos</h2>
+    <p class="reveal">Nos encantaría saber sus comentarios y experiencia.</p>
 
-    <a class="footer-whatsapp" href="https://wa.me/520123456789"
+    <a class="footer-whatsapp reveal"
+       href="https://wa.me/520123456789"
        target="_blank" rel="noopener">
       Envíanos tus comentarios por WhatsApp
     </a>
@@ -148,7 +140,6 @@
      href="https://wa.me/520123456789"
      target="_blank" rel="noopener"
      aria-label="Contactar por WhatsApp">
-
     <svg viewBox="0 0 32 32" aria-hidden="true">
       <path fill="currentColor"
         d="M16 .8A15.1 15.1 0 0 0 3.1 23.7L1 31l7.5-2A15.2 15.2 0 1 0 16 .8Zm0 27.5a12.3 12.3 0 0 1-6.3-1.7l-.5-.3-4.4 1.2L6 23.2l-.3-.5A12.4 12.4 0 1 1 16 28.3Zm6.8-9.3c-.4-.2-2.2-1.1-2.5-1.2-.3-.1-.6-.2-.8.2-.2.4-1 1.2-1.2 1.5-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.5-.3.4-1.2 1.2-1.2 3s1.3 3.5 1.5 3.7c.2.2 2.5 3.8 6.1 5.3.9.4 1.6.6 2.1.7.9.3 1.7.2 2.3.1.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.1-.3-.2-.7-.4Z"/>
@@ -156,12 +147,9 @@
   </a>
 
   <script>
-    // GOOGLE SHEETS: datos publicados en formato CSV.
     const SHEET_CSV =
       "https://docs.google.com/spreadsheets/d/e/2PACX-1vTPkiv0pOXPkAyspOVpzbPs5tBRakvpL3RDz5Mh67MGc81JY0sjIBcmyPNZ5XElpT11xHiMRODMobE_/pub?gid=0&single=true&output=csv";
 
-    // DATOS DE RESPALDO: los 13 productos aparecerán aunque Sheets falle.
-    // Orden: ID, nombre, descripción, categoría, precio, imagen, disponible, orden.
     const fallbackProducts = [
       ["1","LA CLÁSICA","Carne de res a la parrilla, queso amarillo, lechuga fresca, jitomate, cebolla y aderezo de la casa en pan con ajonjolí.","Hamburguesas","85","","TRUE","1"],
       ["2","DELICIOUS BBQ","Carne de res jugosa, queso cheddar, tocino crujiente y salsa BBQ ahumada, servidos en pan suave tostado.","Hamburguesas","97","","TRUE","2"],
@@ -178,7 +166,6 @@
       ["13","CERVEZAS","Corona Extra, Modelo Especial, Victoria, Indio y Tecate. Corona Extra, Modelo Especial, Victoria e Indio en botella de 355 ml; Tecate en botella de 300 ml.","Bebidas","55","","TRUE","13"]
     ];
 
-    // LECTOR CSV
     function parseCSV(text) {
       const rows = [];
       let row = [], value = "", quoted = false;
@@ -217,7 +204,48 @@
       })[char]);
     }
 
-    // CONSTRUCCIÓN DE TARJETAS
+    // ANIMACIÓN DE ELEMENTOS AL ENTRAR EN PANTALLA
+    function observeReveals(root = document) {
+      const elements = root.querySelectorAll(".reveal, .product-card");
+
+      if (!("IntersectionObserver" in window)) {
+        elements.forEach(element => element.classList.add("is-visible"));
+        return;
+      }
+
+      elements.forEach((element, index) => {
+        if (element.dataset.revealReady) return;
+
+        element.dataset.revealReady = "true";
+
+        if (element.classList.contains("product-card")) {
+          element.classList.add("reveal", "reveal-card");
+        }
+
+        element.style.setProperty(
+          "--reveal-delay",
+          `${Math.min(index % 4, 3) * 90}ms`
+        );
+
+        revealObserver.observe(element);
+      });
+    }
+
+    const revealObserver = "IntersectionObserver" in window
+      ? new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.12,
+          rootMargin: "0px 0px -35px 0px"
+        })
+      : null;
+
+    // TARJETAS DE PRODUCTOS
     function renderProducts(products) {
       const grid = document.getElementById("menu-grid");
       grid.innerHTML = "";
@@ -227,7 +255,7 @@
         .sort((a, b) => Number(a[7] || 999) - Number(b[7] || 999));
 
       visible.forEach(product => {
-        const [id, name, description, category, price, image] = product;
+        const [, name, description, category, price, image] = product;
 
         const card = document.createElement("button");
         card.className = "product-card";
@@ -247,7 +275,6 @@
                  <span class="photo-pending" style="display:none">Fotografía<br>no disponible</span>`
               : `<span class="photo-pending">Fotografía<br>del platillo</span>`}
           </span>
-
           <span class="product-details">
             <span class="product-category">${escapeHTML(category || "TRES AMIGOS")}</span>
             <strong class="product-name">${safeName}</strong>
@@ -263,14 +290,20 @@
       if (!visible.length) {
         grid.innerHTML = '<p class="loading">No hay platillos disponibles.</p>';
       }
+
+      observeReveals(grid);
     }
 
     // MODAL DE PRODUCTO
     const productModal = document.getElementById("product-modal");
     const modalCard = document.getElementById("modal-card");
+    let previousFocus = null;
+    let closeTimer = null;
 
     function openProduct(product) {
       const [, name, description, , price, image] = product;
+
+      previousFocus = document.activeElement;
 
       document.getElementById("modal-name").textContent = name;
       document.getElementById("modal-description").textContent = description;
@@ -284,6 +317,7 @@
         modalImage.alt = name;
         modalImage.style.display = "block";
         placeholder.style.display = "none";
+
         modalImage.onerror = () => {
           modalImage.style.display = "none";
           placeholder.style.display = "grid";
@@ -294,6 +328,7 @@
         placeholder.style.display = "grid";
       }
 
+      clearTimeout(closeTimer);
       productModal.classList.remove("is-closing");
       productModal.classList.add("is-open");
       productModal.setAttribute("aria-hidden", "false");
@@ -302,6 +337,8 @@
       modalCard.classList.remove("turn-in");
       void modalCard.offsetWidth;
       modalCard.classList.add("turn-in");
+
+      document.getElementById("close-product").focus();
     }
 
     function closeProduct() {
@@ -309,10 +346,12 @@
 
       productModal.classList.add("is-closing");
 
-      setTimeout(() => {
+      closeTimer = setTimeout(() => {
         productModal.classList.remove("is-open", "is-closing");
         productModal.setAttribute("aria-hidden", "true");
         document.body.classList.remove("no-scroll");
+
+        if (previousFocus) previousFocus.focus();
       }, 450);
     }
 
@@ -327,15 +366,21 @@
     const fullMenuModal = document.getElementById("full-menu-modal");
 
     document.getElementById("open-full-menu").addEventListener("click", () => {
+      previousFocus = document.activeElement;
       fullMenuModal.classList.add("is-open");
       fullMenuModal.setAttribute("aria-hidden", "false");
       document.body.classList.add("no-scroll");
+      document.getElementById("close-full-menu").focus();
     });
 
     function closeFullMenu() {
+      if (!fullMenuModal.classList.contains("is-open")) return;
+
       fullMenuModal.classList.remove("is-open");
       fullMenuModal.setAttribute("aria-hidden", "true");
       document.body.classList.remove("no-scroll");
+
+      if (previousFocus) previousFocus.focus();
     }
 
     document.getElementById("close-full-menu")
@@ -352,7 +397,7 @@
       }
     });
 
-    // CARGA SEGURA: SI SHEETS FALLA O ESTÁ VACÍA, USA LOS 13 PRODUCTOS.
+    // CARGA DE GOOGLE SHEETS Y RESPALDO
     async function loadMenu() {
       try {
         const response = await fetch(SHEET_CSV, { cache: "no-store" });
@@ -377,8 +422,35 @@
       }
     }
 
+    // EFECTO 3D SUTIL PARA PANTALLAS CON RATÓN
+    const canHover = window.matchMedia(
+      "(hover: hover) and (pointer: fine)"
+    ).matches;
+
+    if (canHover && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.addEventListener("pointermove", event => {
+        const card = event.target.closest(".product-card");
+        if (!card) return;
+
+        const rect = card.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width;
+        const y = (event.clientY - rect.top) / rect.height;
+
+        card.style.setProperty("--tilt-x", `${(0.5 - y) * 5}deg`);
+        card.style.setProperty("--tilt-y", `${(x - 0.5) * 5}deg`);
+      });
+
+      document.addEventListener("pointerout", event => {
+        const card = event.target.closest(".product-card");
+        if (card && !card.contains(event.relatedTarget)) {
+          card.style.setProperty("--tilt-x", "0deg");
+          card.style.setProperty("--tilt-y", "0deg");
+        }
+      });
+    }
+
+    observeReveals();
     loadMenu();
   </script>
-
 </body>
 </html>
