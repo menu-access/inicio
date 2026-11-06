@@ -405,89 +405,39 @@
       });
     }
 
-    // VOZ DE BIENVENIDA: ESPAÑOL DE MÉXICO, CÁLIDA Y EXPRESIVA
-    const WELCOME_TEXT =
-      "¡Hola! ¡Bienvenidos a Tres Amigos! " +
-      "Este es nuestro menú digital. " +
-      "Elijan sus platillos y bebidas favoritas y, en cuanto ustedes lo soliciten, " +
-      "uno de nuestros meseros con mucho gusto tomará su orden. " +
-      "¡Esperamos que disfruten su visita!";
+    // AUDIO MP3 DE BIENVENIDA
+    // El archivo debe estar en: audio/bienvenida.mp3
+    const welcomeAudio = new Audio("./audio/bienvenida.mp3");
+    welcomeAudio.preload = "auto";
 
     const audioButton = document.getElementById("play-welcome");
     const audioLabel = document.getElementById("audio-label");
 
-    let selectedMexicanVoice = null;
-
-    function findMexicanVoice() {
-      if (!("speechSynthesis" in window)) return;
-
-      const voices = window.speechSynthesis.getVoices();
-
-      const mexicanVoices = voices.filter(voice =>
-        voice.lang && voice.lang.toLowerCase() === "es-mx"
-      );
-
-      // Preferir voces mexicanas con nombres reconocibles.
-      const expressiveVoice = mexicanVoices.find(voice =>
-        /dalia|monica|paulina|lucia|sabina|jorge|juan|miguel/i.test(voice.name)
-      );
-
-      selectedMexicanVoice =
-        expressiveVoice ||
-        mexicanVoices.find(voice => voice.default) ||
-        mexicanVoices[0] ||
-        voices.find(voice =>
-          voice.lang && voice.lang.toLowerCase().startsWith("es")
-        ) ||
-        null;
-    }
-
-    if ("speechSynthesis" in window) {
-      findMexicanVoice();
-
-      window.speechSynthesis.addEventListener(
-        "voiceschanged",
-        findMexicanVoice
-      );
-    }
-
     function speakWelcome() {
-      if (!("speechSynthesis" in window)) {
-        audioLabel.textContent = "Audio no disponible";
-        return;
-      }
+      // Reinicia el audio si ya estaba reproduciéndose.
+      welcomeAudio.pause();
+      welcomeAudio.currentTime = 0;
 
-      window.speechSynthesis.cancel();
-
-      const utterance = new SpeechSynthesisUtterance(WELCOME_TEXT);
-
-      utterance.lang = "es-MX";
-
-      // Ajustes de interpretación:
-      // ritmo conversacional, tono animado y volumen completo.
-      utterance.rate = 0.98;
-      utterance.pitch = 1.16;
-      utterance.volume = 1;
-
-      if (selectedMexicanVoice) {
-        utterance.voice = selectedMexicanVoice;
-      }
-
-      audioLabel.textContent = "¡Estamos hablando contigo!";
+      audioLabel.textContent = "Reproduciendo bienvenida...";
       audioButton.classList.add("speaking");
 
-      utterance.onend = () => {
-        audioLabel.textContent = "Escuchar bienvenida";
+      welcomeAudio.play().catch(error => {
+        console.error("No se pudo reproducir el MP3:", error);
+        audioLabel.textContent = "No se pudo reproducir";
         audioButton.classList.remove("speaking");
-      };
-
-      utterance.onerror = () => {
-        audioLabel.textContent = "Volver a escuchar";
-        audioButton.classList.remove("speaking");
-      };
-
-      window.speechSynthesis.speak(utterance);
+      });
     }
+
+    welcomeAudio.addEventListener("ended", () => {
+      audioLabel.textContent = "Escuchar bienvenida";
+      audioButton.classList.remove("speaking");
+    });
+
+    welcomeAudio.addEventListener("error", () => {
+      audioLabel.textContent = "Audio no disponible";
+      audioButton.classList.remove("speaking");
+      console.error("Revisa que exista ./audio/bienvenida.mp3");
+    });
 
     audioButton.addEventListener("click", speakWelcome);
 
